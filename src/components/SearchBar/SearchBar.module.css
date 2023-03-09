@@ -5,6 +5,7 @@
     height: 2rem;
 }
 .input{
+    color: rgb(45, 45, 45);
     text-align: center;
     font-size: 1.3rem;
     font-weight:bold;
@@ -25,10 +26,11 @@
 }
 
 .btn{
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.44);
+    
     padding: 0.2rem 0.4rem;
-    color: #eee;
+    color: rgb(45, 45, 45);
     background-color: #ADDDD0;
+    font-weight:900;
     border: none;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;

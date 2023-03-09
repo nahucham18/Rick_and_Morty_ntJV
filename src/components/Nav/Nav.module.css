@@ -12,12 +12,12 @@
         margin-bottom: 1rem;
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
     }
     .menu > .link{
         color: #EEEEEE;
         text-decoration: none;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
     
     .add{
@@ -30,7 +30,8 @@
 
     .random{
         font-size: 1rem;
-        color: white;
+        color: rgb(45, 45, 45);
+        font-weight: bold;
         background-color: #ADDDD0;
         border: none;
         padding:0.2rem  0.4rem;

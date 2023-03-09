@@ -1,8 +1,14 @@
 .container{
+    
+    margin: 0 auto;
+    width: 384px;
     background-color: #ADDDD0;
+    padding: 2rem 0;
+    position: relative;
 }
 
 .imagen{
+    margin: 1rem;
     outline: black 5px solid;
     width: 80%;
     border-radius: 2rem;
@@ -12,6 +18,37 @@
     -o-border-radius: 2rem;
 }
 
-h1,h2,h3{
+h2,h3{
     margin: 0;
+}
+
+.title{
+    font-size: 2.4rem;
+    
+}
+
+.id{
+    margin: .4rem;
+}
+
+
+.status{
+    position: absolute;
+    top: 400px;
+    right: 60px;
+}
+
+.origin{
+    margin: 0.6rem;
+}
+
+.description{
+    
+    text-align: start;
+    padding-left: 3rem;
+}
+
+.gender, .species{
+    display: flex;
+    margin: 1rem;
 }

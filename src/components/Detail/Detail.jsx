@@ -24,14 +24,21 @@ const Detail = ()=>{
 
     return (
         <div className={style.container}>
-            <h1>{character.name}</h1>
-            <h3>{character.id}</h3>
+            <h2 className={style.title}>{character.name}</h2>
+            <h2 className={style.id}>{character.id}</h2>
             <img src={character.image} alt={character.name} className={style.imagen}/>
-            <h2>{character.status}</h2>
+            <h2 className={style.status}>{character.status}</h2>
+            <h2 className={style.origin}>Origen:</h2>
             <h2>{character.origin?.name}</h2>
             <div className={style.description}>
-                <h2>{character.gender}</h2>
-                <h2>{character.species}</h2>
+                <div className={style.gender}>
+                    <h3>Gender: </h3>
+                    <h3>{character.gender}</h3>
+                </div>
+                <div className={style.species}>
+                    <h3>Species: </h3>
+                    <h3>{character.species}</h3>
+                </div>
             </div>
         </div>
     )
