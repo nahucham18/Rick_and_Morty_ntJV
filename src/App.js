@@ -5,11 +5,13 @@ import { useState } from 'react'
 
 
 function App () {
-
   const [ characters, setCharacters] = useState([])
   
   const onSearch = (id)=>{
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    const URL_BASE = "https://rickandmortyapi.com/api"
+    const API_KEY = "ef19ec2c194a.fa1ee29143e598093d2f"
+
+    fetch(`${URL_BASE}/character/${id}?key=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
           if (data.name) {
@@ -17,7 +19,7 @@ function App () {
             let idArray = data.id;
 
             (newArray.includes(idArray)) 
-            ?  window.alert('Ya hay un personaje con ese ID') 
+            ? window.alert('Ya hay un personaje con ese ID') 
             : setCharacters((characters) => [...characters, data]) 
 
           } else {
