@@ -1,6 +1,6 @@
 import style from './Detail.module.css'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 
@@ -20,19 +20,23 @@ const Detail = ()=>{
                 ? setCharacter(data)
                 : window.alert('No esta esa ID')
             })
-    },[])
-
+    },[id])
+    console.log(character.status);
     return (
         <div className={style.container}>
+        <Link className={style.btn} to={`/home`}>Volver</Link>
             <h2 className={style.title}>{character.name}</h2>
             <h2 className={style.id}>{character.id}</h2>
             <img src={character.image} alt={character.name} className={style.imagen}/>
-            <h2 className={style.status}>{character.status}</h2>
+            {character.status === 'Alive' && <h2 className={style.status_alive}>{character.status}</h2>}
+            {character.status === 'Dead' && <h2 className={style.status_dead}>{character.status}</h2>}
+            {character.status === 'Unknow' && <h2 className={style.status_unknow}>{character.status}</h2>}
+            
             <h2 className={style.origin}>Origen:</h2>
             <h2>{character.origin?.name}</h2>
             <div className={style.description}>
                 <div className={style.gender}>
-                    <h3>Gender: </h3>
+                    <h3>Gender:</h3>
                     <h3>{character.gender}</h3>
                 </div>
                 <div className={style.species}>

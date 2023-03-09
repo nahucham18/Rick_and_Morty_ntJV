@@ -3,7 +3,7 @@
     margin: 0 auto;
     width: 384px;
     background-color: #ADDDD0;
-    padding: 2rem 0;
+    padding: 2.6rem 0;
     position: relative;
 }
 
@@ -18,8 +18,11 @@
     -o-border-radius: 2rem;
 }
 
-h2,h3{
+h2{
     margin: 0;
+}
+h3{
+    margin: 0 0.2rem;
 }
 
 .title{
@@ -32,10 +35,50 @@ h2,h3{
 }
 
 
-.status{
+.status_unknow{
+    background-color: rgb(244, 255, 185);
+    padding: 0 1rem 0.2rem 1rem;
     position: absolute;
-    top: 400px;
-    right: 60px;
+    top: 420px;
+    right: 50px;
+    font-size: 1rem;
+
+    outline: 0.2rem solid rgb(255, 244, 94);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.status_alive{
+    background-color: rgb(182, 252, 199);
+    padding: 0 1rem 0.2rem 1rem;
+    position: absolute;
+    top: 420px;
+    right: 50px;
+    font-size: 1rem;
+
+    outline: 0.2rem solid rgb(45, 255, 98);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.status_dead{
+    background-color: rgb(252, 182, 182);
+    padding: 0 1rem 0.2rem 1rem;
+    position: absolute;
+    top: 420px;
+    right: 50px;
+    font-size: 1rem;
+
+    outline: 0.2rem solid rgb(255, 100, 100);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
 .origin{
@@ -51,4 +94,19 @@ h2,h3{
 .gender, .species{
     display: flex;
     margin: 1rem;
+}
+
+.btn{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    text-decoration: none;
+    background-color: #6F38C5;
+    color: #EEE;
+    padding:0 0.6rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
