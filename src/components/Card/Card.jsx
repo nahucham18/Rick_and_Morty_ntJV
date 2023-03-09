@@ -8,7 +8,12 @@ function Card(props) {
       <div className={style.container}>
          <button className={style.btn} onClick={onClose}>X</button>
          <Link to={`/detail/${id}`}>
-            <h2 className={style.titulo}>{name}</h2>
+            {
+               (name.length > 22)
+               ? <h2 className={style.titulo_medio}>{name}</h2>
+               : <h2 className={style.titulo}>{name}</h2>
+            }
+            
          </Link>
          <img className={style.image} src={props.image} alt={name} />
          <div className={style.description}>

@@ -1,0 +1,17 @@
+.container{
+    background-color: #ADDDD0;
+}
+
+.imagen{
+    outline: black 5px solid;
+    width: 80%;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+h1,h2,h3{
+    margin: 0;
+}

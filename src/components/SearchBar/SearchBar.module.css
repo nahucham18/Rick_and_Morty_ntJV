@@ -1,0 +1,38 @@
+
+.container{
+    display: flex;
+    gap: 0.4rem;
+    height: 2rem;
+}
+.input{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight:bold;
+    width: 75px;
+    padding:0 0.55rem;
+    background-color: #a5a5a5;
+    border: 2px solid #ADDDD0;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.input:focus{
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn{
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.44);
+    padding: 0.2rem 0.4rem;
+    color: #eee;
+    background-color: #ADDDD0;
+    border: none;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
