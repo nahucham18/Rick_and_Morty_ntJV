@@ -28,10 +28,9 @@ const Detail = ()=>{
             <h2 className={style.title}>{character.name}</h2>
             <h2 className={style.id}>{character.id}</h2>
             <img src={character.image} alt={character.name} className={style.imagen}/>
-            {character.status === 'Alive' && <h2 className={style.status_alive}>{character.status}</h2>}
-            {character.status === 'Dead' && <h2 className={style.status_dead}>{character.status}</h2>}
-            {character.status === 'Unknow' && <h2 className={style.status_unknow}>{character.status}</h2>}
-            
+                {character.status === 'Alive' && <h2 className={style.status_alive}>{character.status}</h2>}
+                {character.status === 'Dead' && <h2 className={style.status_dead}>{character.status}</h2>}
+                {character.status === 'unknown' && <h2 className={style.status_unknown}>{character.status}</h2>}
             <h2 className={style.origin}>Origen:</h2>
             <h2>{character.origin?.name}</h2>
             <div className={style.description}>

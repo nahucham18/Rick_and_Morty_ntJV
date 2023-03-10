@@ -1,0 +1,45 @@
+.container{
+    background-color: #6F38C5;
+    padding: 0 2rem 4rem 2rem;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    gap: 2rem;
+}
+.form{
+    background-color: #87A2FB;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem ;
+    border-radius:1.5rem ;
+    -webkit-border-radius:1.5rem ;
+    -moz-border-radius:1.5rem ;
+    -ms-border-radius:1.5rem ;
+    -o-border-radius:1.5rem ;
+}
+
+h1{
+    margin: 0;
+}
+
+.label{
+    margin: 1rem;
+}
+
+.btn_login{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem  0.8rem;
+    border: none;
+    border-radius:1rem ;
+    -webkit-border-radius:1rem ;
+    -moz-border-radius:1rem ;
+    -ms-border-radius:1rem ;
+    -o-border-radius:1rem ;
+}
+.image{
+    border: 1pxsolid black;
+    height: 20px;
+    background-image: url("https://images3.alphacoders.com/812/812062.png");
+}

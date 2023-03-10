@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
+import { useLocation } from "react-router-dom"
+
 
 import SearchBar from '../SearchBar/SearchBar'
 
@@ -13,6 +15,7 @@ const Nav =({onSearch})=>{
         onSearch(idRandom)
     }
 
+    const { pathname} = useLocation()
     return(
         
         <nav>
@@ -21,10 +24,13 @@ const Nav =({onSearch})=>{
                     <Link className={style.link} to={`/about`}>About</Link>
                     <Link className={style.link} to={`/home`}>Home</Link>
                 </div>
+                {
+                pathname === '/home' &&
                 <div className={style.add}>
                     <button className={style.random}onClick={charRandom}>¿?</button>
                     <SearchBar onSearch={onSearch}/>
                 </div>
+                }
             </div>
         </nav>
     )
