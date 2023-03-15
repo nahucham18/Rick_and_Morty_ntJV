@@ -1,6 +1,5 @@
 import './App.css'
 import Form from './components/Form/Form'
-import Cards from './components/Cards/Cards'
 import Nav from './components/Nav/Nav'
 import About from './components/About/About'
 import Detail from './components/Detail/Detail'

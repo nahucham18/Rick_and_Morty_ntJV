@@ -1,8 +1,10 @@
 import style from './Card.module.css'
+
 import { Link } from 'react-router-dom'
 import { deleteFav, addFav } from '../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
+
 
 
 function Card(props) {
@@ -16,7 +18,7 @@ function Card(props) {
 
       useEffect(() => {
       myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
+         if (fav.id === id) {
             setIsFav(true);
          }
       });
@@ -28,7 +30,7 @@ function Card(props) {
          dispatch(deleteFav(id))
       }else{
          setIsFav(true)
-         dispatch(addFav(name,species,gender,onClose,id))
+         dispatch(addFav({name,species,gender,id}))
       }
    }
 
