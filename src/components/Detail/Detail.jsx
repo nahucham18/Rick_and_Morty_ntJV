@@ -21,10 +21,12 @@ const Detail = ()=>{
                 : window.alert('No esta esa ID')
             })
     },[id])
-    console.log(character.status);
+
     return (
         <div className={style.container}>
+
         <Link className={style.btn} to={`/home`}>Volver</Link>
+        
             <h2 className={style.title}>{character.name}</h2>
             <h2 className={style.id}>{character.id}</h2>
             <img src={character.image} alt={character.name} className={style.imagen}/>

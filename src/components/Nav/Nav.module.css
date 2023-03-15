@@ -1,32 +1,34 @@
     .nav{
         box-sizing: border-box;
-        background-color: #6F38C5;
-        padding: 1rem 0;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: absolute;
+        
 
     }
     .menu{
-        
+        margin: 0;
         margin-bottom: 1rem;
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
     }
     .menu > .link{
+        
         color: #EEEEEE;
         text-decoration: none;
-        font-size: 1.8rem;
+        font-size: 1rem;
+    }
+
+    .menu > .logout{
+        color: #EEEEEE;
+        cursor: pointer;
     }
     
-    .add{
-        height: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.2rem;
-    }
+    
+    
 
     .random{
         font-size: 1rem;
@@ -42,22 +44,30 @@
         -o-border-radius: 1rem;
 }
 
-@media (min-width: 385px){
+@media (min-width: 576px){
     .nav{
-        background-color: red;
-        padding: 1rem;
+        margin: 0.6rem;
+        
+        position: absolute;
+        background-color: none;
+        padding: 0 1rem;
         flex-direction: row;
         align-items: center;
         
     }
     .menu{
         margin: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu > .link{
+        font-size: 1rem;
     }
 }
 
 @media (min-width: 768px){
-    .nav{
-        background-color: green;
+    .nav{        
         justify-content: space-around;
     }
 }

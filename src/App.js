@@ -8,19 +8,44 @@ import Footer from './components/Footer/Footer'
 
 import Home from './views/Home/Home'
 import Error from './views/Error/Error'
+import Favorites from './views/Favorites/Favorites'
 
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 
 
 function App () {
-
+  
   const {pathname} = useLocation()
+  const navigate = useNavigate()
+
+  const username = 'nahucham@gmail.com';
+  const password = '123asd';
+  
   const [ characters, setCharacters] = useState([])
+  const [access, setAccess] = useState(false)
+  
+  useEffect(()=>{
+    !access && navigate('/');
+  },[access])
+
+  const login = (userData) =>{
+    if(userData.username === username && userData.password === password){
+      setAccess(true)
+      navigate('/home')
+    }else{
+      window.alert('El usuario o contraseña son invalidos')
+    } 
+  }
+
+  const logout = () =>{
+    setAccess(false)
+  }
+
   
   const onSearch = (id)=>{
     const URL_BASE = "https://rickandmortyapi.com/api"
@@ -47,18 +72,22 @@ function App () {
     setCharacters(characters.filter((char)=>char.id !== id))
   }
 
+
+
   return (
     <div className='App' >
             {
-              pathname !== '/' && <Nav onSearch={onSearch}/>
+              pathname !== '/' && <Nav onSearch={onSearch} logout={logout}/>
             }
       <Routes>
-        <Route path='/' element={<Form/>}/>
+        <Route path='/' element={<Form login={login}/>}/>
         {/* Tengo que ver el tema de las vistas , y el tema de pasar porops por vistas */}
         <Route path={`/home`} element={<Home
                                           characters={characters}
                                           onClose={onClose}
-                                          />}/>        
+                                          onSearch={onSearch}
+                                          />}/>  
+        <Route path={'/favorites'} element={<Favorites/>}/>
         <Route path={`/about`} element={<About/>}/>
         <Route path={`/detail/:id`} element={<Detail/>}/>
         <Route path='*' element={<Error/>}/>

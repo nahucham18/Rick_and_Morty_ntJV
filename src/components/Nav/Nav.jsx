@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from 'react-router-dom'
 import { useLocation } from "react-router-dom"
+
 
 
 import SearchBar from '../SearchBar/SearchBar'
@@ -8,14 +9,40 @@ import SearchBar from '../SearchBar/SearchBar'
 
 import style from './Nav.module.css'
 
-const Nav =({onSearch})=>{
+const Nav =({onSearch, logout})=>{
     
+
+    const [ nav, setNav ] = useState(false)
+
     const charRandom = (event) =>{
         let idRandom = Math.floor(Math.random() * 826)+1;
         onSearch(idRandom)
     }
 
     const { pathname} = useLocation()
+
+    // const navOnChange = () =>{
+    //     if(window.innerHeight <= 350 )
+    //         if(window.scrollY > 200){
+    //             setNav(true)
+    //         }else {
+    //             setNav(false)
+    //         }
+    //     else if(window.innerHeight <=  576)
+    //     if(window.scrollY > 400){
+    //         setNav(true)
+    //     }else {
+    //         setNav(false)
+    //     }
+
+    //     else if(window.innerHeight <=  765)
+    //     {
+    //         setNav(true)
+    //     }
+    //     }
+
+    // window.addEventListener('scroll',navOnChange)
+
     return(
         
         <nav>
@@ -23,14 +50,18 @@ const Nav =({onSearch})=>{
                 <div className={style.menu}>
                     <Link className={style.link} to={`/about`}>About</Link>
                     <Link className={style.link} to={`/home`}>Home</Link>
+                    <Link className={style.link} to={`/favorites`}>Favorites</Link>
+                    <span className={style.logout} onClick={()=>logout()}>Logout</span>
                 </div>
-                {
+                {/* {
                 pathname === '/home' &&
-                <div className={style.add}>
-                    <button className={style.random}onClick={charRandom}>¿?</button>
-                    <SearchBar onSearch={onSearch}/>
-                </div>
-                }
+                
+                    <SearchBar onSearch={onSearch} 
+                                charRandom={charRandom}
+                                nav={nav}
+                                />
+            
+                } */}
             </div>
         </nav>
     )

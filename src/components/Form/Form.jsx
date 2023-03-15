@@ -3,7 +3,7 @@ import validation from './Validation'
 
 import { useState } from 'react'
 
-const Form = () =>{
+const Form = ({login}) =>{
 
     const [ userData, setUserData] = useState({
         username:'',
@@ -25,13 +25,18 @@ const Form = () =>{
             ...userData,
             [event.target.name]: event.target.value,}))
     }
-    
+
+    const handleOnSubmit = (event) =>{
+        login(userData)
+        event.preventDefault()
+    }    
+
 
     return (
         
         <div className={style.container}>
             <img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="" />    
-            <form action="" className={style.form}>
+            <form onSubmit={handleOnSubmit} action="" className={style.form}>
                 <h1>Login</h1>
                 <label className={style.label}>Username:
                     <input onChange={handleOnChange} type="text" name="username" />

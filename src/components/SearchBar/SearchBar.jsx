@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from './SearchBar.module.css'
 
-export default function SearchBar({onSearch}) {
+export default function SearchBar({onSearch, charRandom,nav}) {
 
    const [id, setID] = useState('')
    
@@ -9,12 +9,14 @@ export default function SearchBar({onSearch}) {
       setID(event.target.value)
    }
 
-
+   console.log(nav);
 
    return (
-      <div className={style.container}>
+
+      <div className={style.container_active }>
+         <span className={style.random}onClick={charRandom}>¿?</span>
          <input className={style.input} onChange={handleOnSubmit} type='search' />
-         <button className={style.btn} onClick={()=>onSearch(id)}>Agregar</button>
+         <span className={style.btn} onClick={()=>onSearch(id)}>Add</span>
       </div>
    );
 }

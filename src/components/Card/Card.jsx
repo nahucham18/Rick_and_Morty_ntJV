@@ -1,12 +1,47 @@
 import style from './Card.module.css'
 import { Link } from 'react-router-dom'
+import { deleteFav, addFav } from '../../redux/actions/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+
 
 function Card(props) {
 
    const {name, species, gender, onClose, id} = props
+
+   const dispatch = useDispatch()
+   const myFavorites = useSelector(state => state.myFavorites)
+
+   const [ isFav, setIsFav ] = useState(false)
+
+      useEffect(() => {
+      myFavorites.forEach((fav) => {
+         if (fav.id === props.id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
+
+   const handleFavorite = () =>{
+      if(isFav === true){
+         setIsFav(false)
+         dispatch(deleteFav(id))
+      }else{
+         setIsFav(true)
+         dispatch(addFav(name,species,gender,onClose,id))
+      }
+   }
+
    return (
       <div className={style.container}>
          <button className={style.btn} onClick={onClose}>X</button>
+            {
+               isFav ? (
+                  <button onClick={handleFavorite}>❤️</button>
+               ) : (
+                  <button onClick={handleFavorite}>🤍</button>
+               )
+            }
          <Link to={`/detail/${id}`}>
             {
                (name.length > 22)
@@ -24,4 +59,4 @@ function Card(props) {
    );
 }
 
-export default Card
+export default (Card)
