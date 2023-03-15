@@ -1,7 +1,13 @@
 .footer{
-    padding: 4rem 0;
+    padding: 1rem 0;
     width: 100%;
     color: rgb(45, 45, 45);
     background-color: #EEEEEE;
     
+}
+
+@media (min-width: 567px){
+    .footer{
+        height: 20vh;
+    }
 }

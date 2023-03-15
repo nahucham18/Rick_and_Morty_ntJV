@@ -14,10 +14,14 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { deleteFav } from './redux/actions/actions'
 
 
 
 function App () {
+
+  const dispatch  = useDispatch()
   
   const {pathname} = useLocation()
   const navigate = useNavigate()
@@ -69,6 +73,7 @@ function App () {
 
   const onClose = (id) =>{
     setCharacters(characters.filter((char)=>char.id !== id))
+    dispatch(deleteFav(id))
   }
 
 

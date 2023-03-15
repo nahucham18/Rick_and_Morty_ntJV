@@ -7,11 +7,11 @@ export default function Cards(props) {
    return (
       <div className={style.container}>
          {
-            characters.map((char,index)=>{
+            characters.map((char)=>{
                return (
                   <Card 
                      id={char.id}
-                     key={index}
+                     key={char.id}
                      name={char.name}
                      species={char.species}
                      gender={char.gender}

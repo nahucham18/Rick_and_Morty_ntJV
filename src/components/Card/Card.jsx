@@ -32,6 +32,8 @@ function Card(props) {
          setIsFav(true)
          dispatch(addFav({name,species,gender,id}))
       }
+
+      
    }
 
    return (
