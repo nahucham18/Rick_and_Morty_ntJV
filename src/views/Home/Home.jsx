@@ -13,10 +13,11 @@ const Home = ({characters, onClose, onSearch}) =>{
     return (
         <div className={style.home}>
             <div className={style.image}>
+                {/* <img className={style.img_home} src="https://images3.alphacoders.com/812/812062.png" alt="" /> */}
                 <h1 className={style.title}>Rick And Morty App</h1>
                 <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta quis similique eligendi fugiat quidem modi ullam? Nostrum corporis consectetur repellendus sequi quis dolore eaque minima atque commodi, assumenda nisi?</p>
-                
             </div>
+                
             <div className={style.divDown}>
                 <SearchBar onSearch={onSearch}
                             charRandom={charRandom}/>
