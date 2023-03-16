@@ -8,6 +8,10 @@
 
 @media (min-width: 567px){
     .footer{
-        height: 20vh;
+        height: 30vh;
     }
+}
+
+@media (min-width:768px){
+    
 }

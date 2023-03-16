@@ -11,7 +11,8 @@ class Favorites extends React.Component {
     }
     
 
-    render(){
+    render()
+    {
         return(
             <div className={style.container}>
                 <div>
@@ -43,6 +44,8 @@ class Favorites extends React.Component {
         )
     }
 }
+
+
 
 const mapStateToProps = (state) =>{
     return{

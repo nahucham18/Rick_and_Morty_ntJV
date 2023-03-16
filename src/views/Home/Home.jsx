@@ -11,7 +11,7 @@ const Home = ({characters, onClose, onSearch}) =>{
     }
 
     return (
-        <div>
+        <div className={style.home}>
             <div className={style.image}>
                 <h1 className={style.title}>Rick And Morty App</h1>
                 <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta quis similique eligendi fugiat quidem modi ullam? Nostrum corporis consectetur repellendus sequi quis dolore eaque minima atque commodi, assumenda nisi?</p>

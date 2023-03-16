@@ -33,7 +33,7 @@ function Card(props) {
          dispatch(addFav({name,species,gender,id}))
       }
 
-      
+
    }
 
    return (
@@ -41,9 +41,9 @@ function Card(props) {
          <button className={style.btn} onClick={onClose}>X</button>
             {
                isFav ? (
-                  <button onClick={handleFavorite}>❤️</button>
+                  <button className={style.like} onClick={handleFavorite}>❤️</button>
                ) : (
-                  <button onClick={handleFavorite}>🤍</button>
+                  <button className={style.like} onClick={handleFavorite}>🤍</button>
                )
             }
          <Link to={`/detail/${id}`}>

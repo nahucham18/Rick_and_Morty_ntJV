@@ -1,10 +1,10 @@
 
 .container{
     display: flex;
-    opacity: 0;
     align-items: center;
     gap: 0.4rem;
     height: 1.6rem;
+    padding: 1rem 0 0 1rem;
     
     right:10px;
     transition: 1s;
@@ -12,24 +12,10 @@
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+
 }
 
-.container_active{
-    
-    padding: 1rem 0 0 1rem;
-    display:flex;
-    opacity: 1;
-    z-index: 2;
-    align-items: center;
-    gap: 0.4rem;
-    height: 1.6rem;
-    right:10px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-}
+
 .input{
     color: rgb(45, 45, 45);
     text-align: center;
@@ -87,4 +73,10 @@
 
 .random:hover{
     cursor: pointer;
+}
+
+@media (min-width:768px){
+    .container{
+        border: 1px solid red;
+    }
 }

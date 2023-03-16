@@ -13,7 +13,7 @@ export default function SearchBar({onSearch, charRandom,nav}) {
 
    return (
 
-      <div className={style.container_active }>
+      <div className={style.container }>
          <span className={style.random}onClick={charRandom}>¿?</span>
          <input className={style.input} onChange={handleOnSubmit} type='search' />
          <span className={style.btn} onClick={()=>onSearch(id)}>Add</span>

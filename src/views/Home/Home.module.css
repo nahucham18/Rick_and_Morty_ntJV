@@ -1,3 +1,7 @@
+.home{
+    box-sizing: border-box;
+    
+}
 .image{
     box-sizing: border-box;
     border: 1px solid black;
@@ -26,6 +30,11 @@
     font-size: 0.8rem;
 }
 
+.divDown{   
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 .mensaje{
@@ -47,21 +56,24 @@
         box-sizing: border-box;
         background-position: 0;
         width: 100%;
-        height: 320px;
+        height: 40vh;
         padding: 2.6rem;
+    }
+    .divDown{
+        
     }
 }
 
 @media ( min-width: 768px){
     .image{
-        border: 1px solid green;
-        height: 500px;
-        background-position: -100px;
+        
+        height: 50vh;
+        background-size: 800px;
+        background-position: 0 -80px;
     }
 
     .divDown{
-        height: 300px;
-        padding: 2rem 1rem;
+        
     }
 }
 
