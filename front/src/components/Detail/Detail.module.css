@@ -1,0 +1,174 @@
+.container{
+    
+    margin: 0 auto;
+    
+    background-color: #ADDDD0;
+    padding: 2.6rem 0;
+    position: relative;
+}
+
+.imagen{
+    
+    outline: black 5px solid;
+    
+    width: 100%;
+    border-radius: 2rem;
+    
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+h2{
+    margin: 0;
+}
+h3{
+    margin: 0 0.2rem 0 0;
+}
+
+.title{
+    font-size: 2rem;
+    
+}
+
+.id{
+    margin: .4rem;
+}
+
+.container_image{
+    
+    position: relative;
+    width: 50%;
+    max-width: 200px;
+    min-width: 160px;
+    margin: 0 auto;
+}
+
+.status_unknown{
+    background-color: rgb(244, 255, 185);
+    padding: 0 1rem 0.2rem 1rem;
+    position: absolute;
+    top: 410px;
+    right: 60px;
+    font-size: 1rem;
+
+    outline: 0.2rem solid rgb(255, 244, 94);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.status_alive{
+    background-color: rgb(182, 252, 199);
+    padding: 0 1rem 0.2rem 1rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 0.6rem;
+
+    outline: 0.2rem solid rgb(45, 255, 98);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.status_dead{
+    background-color: rgb(252, 182, 182);
+    padding: 0 1rem 0.2rem 1rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 1rem;
+
+    outline: 0.2rem solid rgb(255, 100, 100);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.origin{
+    margin: 0.6rem;
+}
+
+.description{
+    
+    text-align: start;
+    padding-left: 3rem;
+}
+
+.gender, .species{
+    display: flex;
+    margin: 1rem;
+}
+
+.btn{
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    text-decoration: none;
+    background-color: #6F38C5;
+    color: #EEE;
+    padding:0 0.6rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+@media (min-width:576px){
+    .container{
+        display: flex;
+        flex-direction: row;   
+        justify-content: center;     
+        flex-wrap: wrap;
+        gap: 1;
+        height: 60vh;
+    }
+    .container_image{
+        
+        margin: 0;
+    }
+
+    .imagen{
+        width: 100%;
+    }
+    .title{
+        font-size: 1.6rem;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .origin, .origin_name{
+        display: inline;
+        margin: 0.2rem;
+    }
+    .container_description{
+        width: 40%;
+        margin: 0;
+        padding:2rem 1rem ;
+        text-align: start;
+    }
+    .description{
+        padding-left: 0;
+    }
+    .id{
+        font-size: 1rem;
+    }
+
+    .status_dead{
+        font-size: 0.8rem;
+        right: 15px;
+        bottom: 35px;
+    }
+
+    .gender, .species{
+        margin: 0;
+    }
+}

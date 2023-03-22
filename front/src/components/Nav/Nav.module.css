@@ -1,0 +1,86 @@
+    .nav{
+        box-sizing: border-box;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 1;
+        
+
+    }
+    .menu{
+        margin: 0;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .menu > .link{
+        
+        color: #EEEEEE;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .menu > .logout{
+        color: #EEEEEE;
+        cursor: pointer;
+    }
+    
+    
+    
+
+    .random{
+        font-size: 1rem;
+        color: rgb(45, 45, 45);
+        font-weight: bold;
+        background-color: #ADDDD0;
+        border: none;
+        padding:0.2rem  0.4rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+}
+
+@media (min-width: 576px){
+    .nav{
+        margin: 0.6rem;
+        
+        position: absolute;
+        background-color: none;
+        padding: 0 1rem;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .menu{
+        margin: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .menu > .link{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    .nav{        
+        justify-content: space-around;
+    }
+}
+
+@media( min-width: 1200px){
+    .nav{
+        padding-right: 310px;
+        
+        right: 50%;
+    }
+}
+
+
+
+

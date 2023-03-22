@@ -1,0 +1,22 @@
+.container{
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem; 
+    margin: 0 auto;
+
+    width: 100vw;
+}
+
+@media (min-width: 576px){
+    .container{
+        width: 90vw;
+    }
+}
+@media (min-width: 576px){
+    .container{
+        max-width: 1200px;
+    }
+}
