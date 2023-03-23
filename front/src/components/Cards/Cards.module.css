@@ -1,13 +1,24 @@
 .container{
-    padding: 1rem;
+    
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem; 
+    justify-content: flex-start;
+    gap: 1.6rem; 
     margin: 0 auto;
+    padding: 1rem;
 
     width: 100vw;
+}
+
+.container_cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.8rem;
+    margin:0 auto;
+    width: 80%;
+    
+    
 }
 
 @media (min-width: 576px){

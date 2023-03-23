@@ -11,9 +11,9 @@ const Detail = ()=>{
 
     const [character, setCharacter] = useState('')
     useEffect(()=>{
-        const URL_BASE = "https://rickandmortyapi.com/api"
+        const URL_BASE = "http://localhost:3001/rickandmorty/detail/"
         const API_KEY = "ef19ec2c194a.fa1ee29143e598093d2f"
-        fetch(`${URL_BASE}/character/${id}?key=${API_KEY}`)
+        fetch(`${URL_BASE}${id}?key=${API_KEY}`)
             .then((resp)=>resp.json())
             .then((data)=>{
                 (data.name)
