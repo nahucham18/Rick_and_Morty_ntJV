@@ -11,7 +11,7 @@ class Favorites extends React.Component {
     }
     
 
-
+    
     render()
     
     {
@@ -24,10 +24,11 @@ class Favorites extends React.Component {
             const value = event.target.value;
             this.props.filterFav(value)
         }
-
+        
         
         return(
             <div className={style.container}>
+                <h2 className={style.title}>My Favourites</h2>
                 <div>
                     <select onChange={handleOrder} name="" id="">
                         <option value="Order" selected disabled>Order</option>
@@ -49,16 +50,14 @@ class Favorites extends React.Component {
                     {
                     
                         this.props.myFavorites.map( (fav) => {
-                            return  <div key={fav.id}>
-                                        <h1>{fav.name}</h1>
+                            return  <div className={style.fav} key={fav.id}>
+                                        <img className={style.image} src={fav.image} alt={fav.name} />
                                         <span>{fav.id}</span>
-                                        <img src={fav.image} alt={fav.name} />
                     
                                     </div>
                         })
                     }
                 </div>
-                <h1>Buenas soy Favorites</h1>
             </div>
         )
     }

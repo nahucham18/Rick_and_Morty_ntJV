@@ -1,9 +1,41 @@
 .container {
-    padding-top: 10rem;
+    padding-top:2rem ;
+    background-color: #6F38C5;
+}
+
+.title{
+    margin: 1;
+    font-size: 1.8rem;
+    color: #ddd;
+
+}
+
+.image{
+    width: 100px;
+    display: flex;
+    border: 1px solid black;
 }
 
 .contain_favorites{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 0.8rem;
+    padding: 1rem 0.6rem;
+}
+
+.fav{
+    background-color: #ADDDD0;
+    color: #111;
+    font-weight: 900;
+    padding: 0.2rem;
+
+    box-shadow: 2px 2px 3px black;
+    
+    border: 1px solid #111;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
 }
