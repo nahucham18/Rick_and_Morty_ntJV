@@ -28,28 +28,28 @@ const Detail = ()=>{
         <Link className={style.btn} to={`/home`}>Volver</Link>
         
             <h2 className={style.title}>{character.name}</h2>
-            <div className={style.container_image}>
             <h2 className={style.id}>{character.id}</h2>
-                <img src={character.image} alt={character.name} className={style.imagen}/>
-                    {character.status === 'Alive' && <h2 className={style.status_alive}>{character.status}</h2>}
-                    {character.status === 'Dead' && <h2 className={style.status_dead}>{character.status}</h2>}
-                    {character.status === 'unknown' && <h2 className={style.status_unknown}>{character.status}</h2>}
-            </div>
             <div className={style.container_description}>
-                <h2 className={style.origin}>Origen:</h2>
-                <h2 className={style.origin_name}>{character.origin?.name}</h2>
+                <div className={style.image_container}>
+                    <img src={character.image} alt={character.name} className={style.image}/>
+                        {character.status === 'Alive' && <h2 className={style.status_alive}>{character.status}</h2>}
+                        {character.status === 'Dead' && <h2 className={style.status_dead}>{character.status}</h2>}
+                        {character.status === 'unknown' && <h2 className={style.status_unknown}>{character.status}</h2>}
+                </div>
                 <div className={style.description}>
-                    <div className={style.gender}>
-                        <h3>Gender:</h3>
-                        <h3>{character.gender}</h3>
-                    </div>
-                    <div className={style.species}>
-                        <h3>Species: </h3>
-                        <h3>{character.species}</h3>
+                <span className={style.titles}>Origen:</span>
+                <span className={style.origin_name}>{character.origin?.name}</span>
+                    <br />
+                        <span className={style.titles}>Gender: </span>
+                        <span>{character.gender}</span>
+                    
+                    <br />
+                        <span className={style.titles}>Species: </span>
+                        <span>{character.species}</span>
+                    
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 

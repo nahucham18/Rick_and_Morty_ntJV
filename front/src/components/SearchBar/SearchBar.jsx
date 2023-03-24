@@ -8,9 +8,6 @@ export default function SearchBar({onSearch, charRandom,nav}) {
    const handleOnSubmit = (event)=>{
       setID(event.target.value)
    }
-   
-   
-   console.log(nav);
 
    return (
 

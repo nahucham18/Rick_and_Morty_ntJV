@@ -17,7 +17,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     width: 70px;
-    padding:0 0.55rem;
+    padding:0.3rem 0.55rem 0.2rem 0.55rem;
+    
     background-color: #a5a5a5;
     border: 2px solid #6F38C5;
     border-radius: 1rem;
@@ -33,18 +34,20 @@
 }
 
 .btn{
-    
     padding: 0.2rem 0.4rem;
     color: #EEEEEE;
     background-color: #6F38C5;
     font-weight:900;
     font-size: 1rem;
     border: none;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+
+    box-shadow: 1px 1px 3px black;
+
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
 }
 .btn:hover{
     cursor: pointer;
@@ -57,14 +60,14 @@
     color: #EEEEEE;
     background-color: #6F38C5;
     border: none;
-    padding: 0 0.2rem 0.1rem 0.2rem;
-    
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    
+    padding: 0.2rem;
+    padding-top: 0;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
 }
 
 .random:hover{

@@ -11,7 +11,7 @@ const getCharDetail = (res,ID) =>{
             gender:data.gender,
             species:data.species,
             status:data.status,
-            origin:data.origin.name
+            origin:data.origin?.name
         }
         res.writeHead(200,{'Content-type':'application/json'}).end(JSON.stringify(obj))
     })

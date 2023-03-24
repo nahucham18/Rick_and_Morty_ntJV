@@ -24,10 +24,16 @@ const reducer =(state = initialState, action) =>{
                     }    
         
         case FILTER_FAV:
-            
+            if(action.payload === 'All'){
+                return{
+                    ...state,
+                    allCharacters: [...state.myFavorites]
+                }
+            }
+
             return{
                 ...state,
-                allCharacters: allCharacters.filter(char => char.gender === action.payload)
+                allCharacters: state.myFavorites.filter(char => char.gender === action.payload)
                     
             }
 
@@ -37,15 +43,12 @@ const reducer =(state = initialState, action) =>{
                     ...state,
                     allCharacters: [...state.allCharacters.sort((a, b)=> a.id - b.id)]
                 }
-            }else{
-                return{
+            }
+            return{
                     ...state,
                     allCharacters: [...state.allCharacters.sort((a, b)=> b.id - a.id)]
                 }
-            }
             
-
-
         default: return {
                         ...state
                         }

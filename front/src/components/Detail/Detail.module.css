@@ -3,15 +3,26 @@
     margin: 0 auto;
     
     background-color: #ADDDD0;
-    padding: 2.6rem 0;
+    padding: 3rem 0;
     position: relative;
+
+    
 }
 
-.imagen{
+.container_description{
+    padding: 0rem 1rem ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    text-align: start;
+}
+
+.image{
     
     outline: black 5px solid;
+    width: 200px;
     
-    width: 100%;
     border-radius: 2rem;
     
     -webkit-border-radius: 2rem;
@@ -20,11 +31,12 @@
     -o-border-radius: 2rem;
 }
 
+.image_container{
+    position: relative;
+}
+
 h2{
     margin: 0;
-}
-h3{
-    margin: 0 0.2rem 0 0;
 }
 
 .title{
@@ -36,14 +48,14 @@ h3{
     margin: .4rem;
 }
 
-.container_image{
+/* .container_image{
     
     position: relative;
     width: 50%;
     max-width: 200px;
     min-width: 160px;
     margin: 0 auto;
-}
+} */
 
 .status_unknown{
     background-color: rgb(244, 255, 185);
@@ -92,25 +104,21 @@ h3{
     -o-border-radius: 2rem;
 }
 
-.origin{
-    margin: 0.6rem;
-}
-
 .description{
-    
-    text-align: start;
-    padding-left: 3rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: .8;
 }
 
-.gender, .species{
-    display: flex;
-    margin: 1rem;
+.titles{
+    
+    font-weight: 900;
 }
 
 .btn{
     position: absolute;
     left: 10px;
-    top: 60px;
+    bottom: 1rem;
     text-decoration: none;
     background-color: #6F38C5;
     color: #EEE;
