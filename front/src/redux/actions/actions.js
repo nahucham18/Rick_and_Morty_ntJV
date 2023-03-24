@@ -12,6 +12,6 @@ export const filterFav = (gender) =>{
     return {type: FILTER_FAV, payload:gender}
 }
 
-export const orderFav = (id) => {
-    return {type: ORDER_FAV, payload:id}
+export const orderFav = (order) => {
+    return {type: ORDER_FAV, payload:order}
 }

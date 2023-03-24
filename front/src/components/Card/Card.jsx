@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 
 function Card(props) {
 
-   const {name, species, gender, onClose, id} = props
+   const {name, species, gender, onClose, id,image} = props
 
    const dispatch = useDispatch()
    const myFavorites = useSelector(state => state.myFavorites)
@@ -30,7 +30,7 @@ function Card(props) {
          dispatch(deleteFav(id))
       }else{
          setIsFav(true)
-         dispatch(addFav({name,species,gender,id}))
+         dispatch(addFav({name,species,gender,id,image}))
       }
 
 
@@ -54,7 +54,7 @@ function Card(props) {
             }
             
          </Link>
-         <img className={style.image} src={props.image} alt={name} />
+         <img className={style.image} src={image} alt={name} />
          <div className={style.description}>
             <h2>{species}</h2>
             <h2>{gender}</h2>

@@ -7,27 +7,39 @@
     gap: 1.6rem; 
     margin: 0 auto;
     padding: 1rem;
-
     width: 100vw;
 }
 
 .container_cards{
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    gap:0.8rem;
+    gap:2rem 0.8rem;
     margin:0 auto;
     width: 80%;
+    margin-bottom: 2rem;
     
     
 }
 
 @media (min-width: 576px){
     .container{
-        width: 90vw;
+        width: 90%;
+        margin-top: 2rem;
+        
+    }
+
+    .container_cards{
+        width: 100%;
     }
 }
-@media (min-width: 576px){
+
+@media (min-width: 768px){
     .container{
-        max-width: 1200px;
+        width: 100%;
+    }
+
+    .container_cards{
+        gap: 0.8rem;
     }
 }

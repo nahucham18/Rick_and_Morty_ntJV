@@ -24,6 +24,7 @@ const reducer =(state = initialState, action) =>{
                     }    
         
         case FILTER_FAV:
+            
             return{
                 ...state,
                 allCharacters: allCharacters.filter(char => char.gender === action.payload)
@@ -34,12 +35,12 @@ const reducer =(state = initialState, action) =>{
             if(action.payload === 'Ascendente'){
                 return {
                     ...state,
-                    myFavorites: allCharacters.sort((a,b)=> a-b)
+                    allCharacters: [...state.allCharacters.sort((a, b)=> a.id - b.id)]
                 }
             }else{
                 return{
                     ...state,
-                    myFavorites: allCharacters.sort((a,b)=> b-a)
+                    allCharacters: [...state.allCharacters.sort((a, b)=> b.id - a.id)]
                 }
             }
             
