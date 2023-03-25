@@ -17,9 +17,12 @@ const reducer =(state = initialState, action) =>{
                     }
 
         case DELETE_FAV:
+            console.log('llegue');
             return{
                     ...state,
                     myFavorites:state.myFavorites.filter(fav =>{
+                    return fav.id !== action.payload}),
+                    allCharacters:state.myFavorites.filter(fav =>{
                     return fav.id !== action.payload})
                     }    
         

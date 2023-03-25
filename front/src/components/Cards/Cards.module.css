@@ -6,19 +6,24 @@
     justify-content: flex-start;
     gap: 1.6rem; 
     margin: 0 auto;
-    padding: 1rem;
+    
     width: 100vw;
+
+    border: 1px solid red;
+    
 }
 
 .container_cards{
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap:2rem 0.8rem;
     margin:0 auto;
     width: 80%;
     margin-bottom: 2rem;
     
+    border:1px solid green
     
 }
 

@@ -28,7 +28,7 @@ class Favorites extends React.Component {
         
         return(
             <div className={style.container}>
-                <h2 className={style.title}>My Favourites</h2>
+                <h2 className={style.title}>My Favorites</h2>
                 <div>
                     <select onChange={handleOrder} name="" id="">
                         <option value="Order" selected disabled>Order</option>

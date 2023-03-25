@@ -3,7 +3,7 @@
     margin: 0 auto;
     
     background-color: #ADDDD0;
-    padding: 3rem 0;
+    padding: 3rem 2rem;
     position: relative;
     
 
@@ -62,8 +62,8 @@
     background-color: rgb(244, 255, 185);
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
-    top: 410px;
-    right: 60px;
+    bottom: 5px;
+    right: 15px;
     font-size: 1rem;
 
     outline: 0.2rem solid rgb(255, 244, 94);
@@ -78,9 +78,9 @@
     background-color: rgb(182, 252, 199);
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
-    bottom: 15px;
+    bottom: 5px;
     right: 15px;
-    font-size: 0.6rem;
+    font-size: 1rem;
 
     outline: 0.2rem solid rgb(45, 255, 98);
     border-radius: 2rem;
@@ -93,7 +93,7 @@
     background-color: rgb(252, 182, 182);
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
-    bottom: 15px;
+    bottom: 5px;
     right: 15px;
     font-size: 1rem;
 

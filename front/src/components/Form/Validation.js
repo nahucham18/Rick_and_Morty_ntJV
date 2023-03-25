@@ -1,6 +1,9 @@
 const validation = (userData) =>{
     
-        let errors = {};
+        let errors = {
+            username: 'No hay error',
+            password: 'No hay error'
+        };
 
         if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userData.username)){
             errors.username = 'El email es invalido';}
@@ -15,7 +18,7 @@ const validation = (userData) =>{
             errors.password ='Tiene que tener entre 6 y 10 caracteres'
         }
 
-        if(!userData.password){errors.password = ''}
+        if(!userData.password){errors.password = 'No hay error'}
         
 
         return errors;

@@ -1,6 +1,7 @@
 .container {
     padding-top:2rem ;
     background-color: #6F38C5;
+    min-height: 80vh;
 }
 
 .title{

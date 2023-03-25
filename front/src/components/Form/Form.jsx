@@ -11,8 +11,8 @@ const Form = ({login}) =>{
     })
 
     const [ errors, setErrors] = useState({
-        username:'',
-        password:'',
+        username:'No hay error',
+        password:'No hay error',
     })
 
     const handleOnChange = (event) =>{
@@ -39,18 +39,19 @@ const Form = ({login}) =>{
             <form onSubmit={handleOnSubmit} action="" className={style.form}>
                 <h1>Login</h1>
                 <div className={style.contenedor_label}>
-                    <label className={style.label}>Username:
+                    <label className={style.label}>Username:</label>
                         <input className={style.input} onChange={handleOnChange} type="text" name="username" />
-                    </label>
-                        {errors.username && <span className={style.error}>{errors.username}</span>}
+                        <span className={(errors.username !== 'No hay error')? style.error : style.noError}>{errors.username}</span>
+                        
                 </div>
                 
                 <div className={style.contenedor_label}>
                     <label className={style.label}>
                         Password: 
+                        </label>
                         <input className={style.input} onChange={handleOnChange} type="password" name="password" />
-                        {errors.password && <span className={style.error}>{errors.password}</span>}
-                    </label>
+                        <span className={(errors.password !== 'No hay error')? style.error : style.noError}>{errors.password}</span>
+                    
                 </div>
 
                 <button className={style.btn_login}>LOGIN</button>

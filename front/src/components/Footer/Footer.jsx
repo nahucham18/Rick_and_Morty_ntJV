@@ -3,7 +3,7 @@ import style from './Footer.module.css'
 const Footer = () =>{
     return (
         <footer className={style.footer}>
-            <p>Creado por Nahuel Chamorro</p>
+            <p className={style.p}>Creado por Nahuel Chamorro</p>
         </footer>
     )
 }
