@@ -23,6 +23,8 @@
     justify-content: space-around;
     gap: 0.8rem;
     padding: 1rem 0.6rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .fav{
@@ -39,4 +41,10 @@
     -moz-border-radius: 0.2rem;
     -ms-border-radius: 0.2rem;
     -o-border-radius: 0.2rem;
+}
+
+@media (min-width:576px){
+    .contain_favorites{
+        padding: 1rem 3rem;
+    }
 }

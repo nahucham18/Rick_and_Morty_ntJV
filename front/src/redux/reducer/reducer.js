@@ -1,6 +1,7 @@
-import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_FAV } from '../actions-types/actions-types'
+import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_FAV, ADD_CHARACTER} from '../actions-types/actions-types'
 
 const initialState = ({
+                        homeCharacters:[],
                         myFavorites:[],
                         allCharacters:[]
                         })
@@ -9,6 +10,12 @@ const {allCharacters} = initialState
 
 const reducer =(state = initialState, action) =>{
     switch(action.type){
+        case ADD_CHARACTER:
+            return{
+                ...state,
+                homeCharacters:[...state.homeCharacters,action.payload]
+            }
+
         case ADD_FAV:
             return  {
                     ...state,

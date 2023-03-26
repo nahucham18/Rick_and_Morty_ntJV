@@ -5,3 +5,5 @@ export const DELETE_FAV = 'DELETE_FAV'
 export const FILTER_FAV = 'FILTER_FAV'
 
 export const ORDER_FAV = 'ORDER_FAV'
+
+export const ADD_CHARACTER ='ADD_CHARACTER'

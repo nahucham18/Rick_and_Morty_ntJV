@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { deleteFav } from './redux/actions/actions'
+import { addCharacter } from './redux/actions/actions'
 
 
 
@@ -33,6 +34,7 @@ function App () {
   const [access, setAccess] = useState(false)
   
   useEffect(()=>{
+
     !access && navigate('/');
   },[access])
 
@@ -62,9 +64,11 @@ function App () {
             let newArray = characters.map(char=>char.id)
             let idArray = data.id;
 
-            (newArray.includes(idArray)) 
-            ? window.alert('Ya hay un personaje con ese ID') 
-            : setCharacters((characters) => [...characters, data]) 
+            if(newArray.includes(idArray)){
+              window.alert('Ya hay un personaje con ese ID') 
+            }
+              setCharacters((characters) => [...characters, data])
+              dispatch(addCharacter(data))
 
           } else {
             window.alert('No hay personajes con ese ID');
@@ -95,7 +99,11 @@ function App () {
         <Route path={'/favorites'} element={<Favorites/>}/>
         <Route path={`/about`} element={<About/>}/>
         <Route path={`/detail/:id`} element={<Detail/>}/>
-        <Route path='*' element={<Error/>}/>
+        <Route path={`/404`} element={<div>fallo 404</div>}/>
+      <Route path='*' element={<Favorites/>}/>
+        
+        
+        
       </Routes>
       <Footer/>
     </div>
