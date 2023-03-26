@@ -1,7 +1,7 @@
 import style from './Card.module.css'
 
 import { Link } from 'react-router-dom'
-import { deleteFav, addFav } from '../../redux/actions/actions';
+import { deleteFav, addFav, deleteCharacter } from '../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 
@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 
 function Card(props) {
 
-   const {name, species, gender, onClose, id,image} = props
+   const {name, species, gender, id,image} = props
 
    const dispatch = useDispatch()
    const myFavorites = useSelector(state => state.myFavorites)
@@ -32,8 +32,11 @@ function Card(props) {
          setIsFav(true)
          dispatch(addFav({name,species,gender,id,image}))
       }
+   }
 
-
+   const onClose = ()=>{
+      dispatch(deleteCharacter(id))
+      dispatch(deleteFav(id));
    }
 
    return (

@@ -1,13 +1,12 @@
 import style from './Favorites.module.css'
 import { connect } from 'react-redux'
 import React from 'react'
-import { filterFav, orderFav } from '../../redux/actions/actions'
+import { filterGender, orderFav } from '../../redux/actions/actions'
 
 class Favorites extends React.Component {
     constructor(props){
         super(props)
 
-    
     }
     
 
@@ -15,14 +14,13 @@ class Favorites extends React.Component {
     render()
     
     {
-        
         const handleOrder = (event) =>{
             const value = event.target.value;
             this.props.orderFav(value)
         }
         const handleGender = (event) =>{
             const value = event.target.value;
-            this.props.filterFav(value)
+            this.props.filterGender(value)
         }
         
         
@@ -53,7 +51,6 @@ class Favorites extends React.Component {
                             return  <div className={style.fav} key={fav.id}>
                                         <img className={style.image} src={fav.image} alt={fav.name} />
                                         <span>{fav.id}</span>
-                    
                                     </div>
                         })
                     }
@@ -65,6 +62,7 @@ class Favorites extends React.Component {
 
 
 
+
 const mapStateToProps = (state) =>{
     return{
         myFavorites: state.allCharacters
@@ -73,7 +71,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = {
     orderFav,
-    filterFav
+    filterGender
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Favorites)

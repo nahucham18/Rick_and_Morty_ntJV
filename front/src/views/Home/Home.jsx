@@ -4,7 +4,7 @@ import style from './Home.module.css'
 import Selectores from '../../components/Selectores/Selectores'
 
 
-const Home = ({characters, onClose, onSearch}) =>{
+const Home = ({onSearch}) =>{
 
     const charRandom = (event) =>{
         let idRandom = Math.floor(Math.random() * 826)+1;
@@ -24,12 +24,12 @@ const Home = ({characters, onClose, onSearch}) =>{
                             charRandom={charRandom}/>
                 <Selectores/>
                 {
-                characters.length === 0 && <div className={style.vacio}>
+                // characters.length === 0 && 
+                <div className={style.vacio}>
                     <h1 className={style.mensaje}>No tienes ningun personaje cargado</h1> 
                     </div>
                 }
-                <Cards characters={characters}
-                        onClose={onClose}></Cards>
+                <Cards/>
             </div>
         </div>
     )

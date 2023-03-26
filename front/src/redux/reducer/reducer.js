@@ -1,19 +1,21 @@
-import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_FAV, ADD_CHARACTER} from '../actions-types/actions-types'
+import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_GENDER, ADD_CHARACTER, DELETE_CHARACTER} from '../actions-types/actions-types'
 
 const initialState = ({
                         homeCharacters:[],
+                        copyHomeCharacters:[],
                         myFavorites:[],
                         allCharacters:[]
                         })
 
-const {allCharacters} = initialState
+const {Characters} = initialState
 
 const reducer =(state = initialState, action) =>{
     switch(action.type){
         case ADD_CHARACTER:
             return{
                 ...state,
-                homeCharacters:[...state.homeCharacters,action.payload]
+                homeCharacters:[...state.homeCharacters,action.payload],
+                copyHomeCharacters:[...state.homeCharacters,action.payload]
             }
 
         case ADD_FAV:
@@ -23,6 +25,17 @@ const reducer =(state = initialState, action) =>{
                     allCharacters:[...state.myFavorites,action.payload]
                     }
 
+        case DELETE_CHARACTER:
+            return{
+                ...state,
+                homeCharacters:state.homeCharacters.filter( character =>{
+                    return character.id !== action.payload
+                }),
+                copyHomeCharacters:state.homeCharacters.filter( character =>{
+                    return character.id !== action.payload
+                })
+            }
+
         case DELETE_FAV:
             console.log('llegue');
             return{
@@ -30,10 +43,12 @@ const reducer =(state = initialState, action) =>{
                     myFavorites:state.myFavorites.filter(fav =>{
                     return fav.id !== action.payload}),
                     allCharacters:state.myFavorites.filter(fav =>{
-                    return fav.id !== action.payload})
+                    return fav.id !== action.payload}),
+                    
                     }    
         
-        case FILTER_FAV:
+        case FILTER_GENDER:
+            
             if(action.payload === 'All'){
                 return{
                     ...state,

@@ -14,8 +14,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { deleteFav } from './redux/actions/actions'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteCharacter, deleteFav } from './redux/actions/actions'
 import { addCharacter } from './redux/actions/actions'
 
 
@@ -30,6 +30,8 @@ function App () {
   const username = 'nahucham@gmail.com';
   const password = '123asd';
   
+  const {homeCharacters} = useSelector(state => state)
+
   const [ characters, setCharacters] = useState([])
   const [access, setAccess] = useState(false)
   
@@ -60,28 +62,26 @@ function App () {
     fetch(`${URL_BASE}/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
+          data.key=data.id;
+          console.log(data.key);
+          console.log(data);
           if (data.name) {
-            let newArray = characters.map(char=>char.id)
+            let newArray = homeCharacters.map(char=>char.id)
+            console.log(newArray);
             let idArray = data.id;
+            console.log(idArray);
 
             if(newArray.includes(idArray)){
               window.alert('Ya hay un personaje con ese ID') 
-            }
-              setCharacters((characters) => [...characters, data])
+            }else{
               dispatch(addCharacter(data))
-
+            }
+              
           } else {
             window.alert('No hay personajes con ese ID');
           }
       });
   }
-
-  const onClose = (id) =>{
-    setCharacters(characters.filter((char)=>char.id !== id))
-    dispatch(deleteFav(id))
-  }
-
-
 
   return (
     <div className='App' >
@@ -91,11 +91,7 @@ function App () {
       <Routes>
         <Route path='/' element={<Form login={login}/>}/>
         {/* Tengo que ver el tema de las vistas , y el tema de pasar porops por vistas */}
-        <Route path={`/home`} element={<Home
-                                          characters={characters}
-                                          onClose={onClose}
-                                          onSearch={onSearch}
-                                          />}/>  
+        <Route path={`/home`} element={<Home onSearch={onSearch}/>}/>  
         <Route path={'/favorites'} element={<Favorites/>}/>
         <Route path={`/about`} element={<About/>}/>
         <Route path={`/detail/:id`} element={<Detail/>}/>
