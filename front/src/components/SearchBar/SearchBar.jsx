@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from './SearchBar.module.css'
 
 export default function SearchBar({onSearch, charRandom,nav}) {
 
    const [id, setID] = useState('')
    
+   useEffect(()=>{
+
+   },[])
    const handleOnSubmit = (event)=>{
       setID(event.target.value)
    }
