@@ -1,7 +1,8 @@
 let fav = require ('../utils/fav')
 
 const getFav = (req, res) =>{
-        res.status(200).join(fav)
+        console.log('FAVORITOS');
+        res.status(200).json(fav)
 }
 
 module.exports = getFav;
