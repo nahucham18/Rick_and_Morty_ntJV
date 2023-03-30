@@ -63,13 +63,9 @@ function App () {
       .then((response) => response.json())
       .then((data) => {
           data.key=data.id;
-          console.log(data.key);
-          console.log(data);
           if (data.name) {
             let newArray = homeCharacters.map(char=>char.id)
-            console.log(newArray);
             let idArray = data.id;
-            console.log(idArray);
 
             if(newArray.includes(idArray)){
               window.alert('Ya hay un personaje con ese ID') 

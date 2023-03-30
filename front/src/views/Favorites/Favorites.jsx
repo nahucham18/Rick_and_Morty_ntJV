@@ -1,19 +1,29 @@
 import style from './Favorites.module.css'
 import { connect } from 'react-redux'
 import React from 'react'
+import axios from 'axios'
 import { filterGender, orderFav } from '../../redux/actions/actions'
 
 class Favorites extends React.Component {
     constructor(props){
         super(props)
 
+        
     }
-    
 
     
-    render()
     
+    componentDidMount(){
+        getFavorites()
+        
+    }
+    
+    render()
+
     {
+
+        
+
         const handleOrder = (event) =>{
             const value = event.target.value;
             this.props.orderFav(value)
@@ -60,7 +70,10 @@ class Favorites extends React.Component {
     }
 }
 
-
+const getFavorites = async()=>{
+    const favs = await axios.get("http://localhost:3001/rickandmorty/fav/")
+    return favs;
+}
 
 
 const mapStateToProps = (state) =>{

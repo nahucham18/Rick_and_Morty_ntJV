@@ -2,6 +2,7 @@ import Cards from '../../components/Cards/Cards'
 import SearchBar from'../../components/SearchBar/SearchBar'
 import style from './Home.module.css'
 import Selectores from '../../components/Selectores/Selectores'
+import { useSelector } from 'react-redux'
 
 
 const Home = ({onSearch}) =>{
@@ -11,10 +12,11 @@ const Home = ({onSearch}) =>{
         onSearch(idRandom)
     }
 
+    const {homeCharacters} = useSelector(state => state)
+
     return (
         <div className={style.home}>
             <div className={style.image}>
-                {/* <img className={style.img_home} src="https://images3.alphacoders.com/812/812062.png" alt="" /> */}
                 <h1 className={style.title}>Rick And Morty App</h1>
                 <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta quis similique eligendi fugiat quidem modi ullam? Nostrum corporis consectetur repellendus sequi quis dolore eaque minima atque commodi, assumenda nisi?</p>
             </div>
@@ -23,16 +25,20 @@ const Home = ({onSearch}) =>{
                 <SearchBar onSearch={onSearch}
                             charRandom={charRandom}/>
                 <Selectores/>
+                
                 {
-                // characters.length === 0 && 
-                <div className={style.vacio}>
-                    <h1 className={style.mensaje}>No tienes ningun personaje cargado</h1> 
+                    (homeCharacters<1)
+                    ?<div className={style.vacio}>
+                        <h1 className={style.mensaje}>No tienes ningun personaje cargado</h1> 
                     </div>
+                    :<Cards/>
                 }
-                <Cards/>
+                
+            
             </div>
         </div>
     )
 }
 
 export default Home
+/* <img className={style.img_home} src="https://images3.alphacoders.com/812/812062.png" alt="" /> */

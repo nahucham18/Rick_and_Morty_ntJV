@@ -1,8 +1,10 @@
 let fav = require ('../utils/fav')
 
-const getFav = (req, res) =>{
-        console.log('FAVORITOS');
-        res.status(200).json(fav)
+
+
+const getFav =  () =>{
+        console.log(`FAV DE GET ${fav}`);
+        return fav
 }
 
 module.exports = getFav;

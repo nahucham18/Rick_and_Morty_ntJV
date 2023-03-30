@@ -1,17 +1,14 @@
 let fav = require('../utils/fav')
 
-const postFav = (req, res) =>{
-    const character = req.body
+console.log(fav);
+
+const postFav = (character) =>{
     const repetido = fav.find(fav => fav.id == character.id)
-    try{
-        if(repetido) throw Error ('Es repetido')
-        fav.push(character)
-        res.status(200).json(fav)
-    }
-    catch(error){
-        res.status(404).json({error: error.message})
-    }    
+    if(repetido) throw Error ('Es repetido')
+    fav.push(character)
+    console.log(`FAV DE POST ${fav}`);
+    return character
 
 }
 
-module.exports = postFav
+module.exports = postFav;

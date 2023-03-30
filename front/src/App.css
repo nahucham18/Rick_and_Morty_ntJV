@@ -1,11 +1,15 @@
+@font-face {
+   font-family: "Helvetica";
+   src: url("./assets/Helvetica fuentes/HelveticaRoundedLTStd-Bd.otf");
+}
+
 .App {
+   font-family:"Helvetica";
    position: relative;
    box-sizing: border-box;
    text-align: center;
    background-color: #87A2FB;
-   
-   
-   
+      
    height: 100wh;
 
 }

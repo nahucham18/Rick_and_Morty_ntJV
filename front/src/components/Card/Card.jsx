@@ -1,5 +1,7 @@
 import style from './Card.module.css'
 
+import axios from 'axios'
+
 import { Link } from 'react-router-dom'
 import { deleteFav, addFav, deleteCharacter } from '../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,13 +30,18 @@ function Card(props) {
       if(isFav === true){
          setIsFav(false)
          dispatch(deleteFav(id))
+         axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`)
+         
+
       }else{
          setIsFav(true)
-         dispatch(addFav({name,species,gender,id,image}))
+         dispatch (addFav({name,species,gender,id,image}))
+         axios.post('http://localhost:3001/rickandmorty/fav',{name,species,gender,id,image})
       }
    }
 
    const onClose = ()=>{
+      axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`)
       dispatch(deleteCharacter(id))
       dispatch(deleteFav(id));
    }
