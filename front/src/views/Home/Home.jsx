@@ -3,6 +3,7 @@ import SearchBar from'../../components/SearchBar/SearchBar'
 import style from './Home.module.css'
 import Selectores from '../../components/Selectores/Selectores'
 import { useSelector } from 'react-redux'
+import MensajeHome from '../../components/MensajeHome/MensajeHome'
 
 
 const Home = ({onSearch}) =>{
@@ -28,9 +29,7 @@ const Home = ({onSearch}) =>{
                 
                 {
                     (homeCharacters<1)
-                    ?<div className={style.vacio}>
-                        <h1 className={style.mensaje}>No tienes ningun personaje cargado</h1> 
-                    </div>
+                    ?<MensajeHome/>
                     :<Cards/>
                 }
                 

@@ -30,12 +30,6 @@ const Selectores = () =>{
                 <option value="unknown">unknown</option>
             </select>
 
-            <select>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
 
         </div>
     )

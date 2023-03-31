@@ -42,22 +42,9 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    
 }
 
-
-
-.mensaje{
-    border: 1px solid #eee;
-    margin: 1rem;
-    font-size: 1.4rem;
-    color: #eee;
-    padding: 2rem;
-    border-radius: 1.6rem;
-    -webkit-border-radius: 1.6rem;
-    -moz-border-radius: 1.6rem;
-    -ms-border-radius: 1.6rem;
-    -o-border-radius: 1.6rem;
-}
 
 @media ( min-width: 576px ) {
     

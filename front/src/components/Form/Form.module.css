@@ -23,7 +23,7 @@
     padding:0.4rem 2rem;
     width: 100%;
     max-width: 350px;
-
+    height: 70%;
     
     
     margin: 0 auto;
@@ -85,7 +85,8 @@ h1{
 
 }
 
-.error, .noError{
+.error{
+    height: 50px;
     opacity: 1;
     margin: 0 auto;
     font-size: 0.8rem;
@@ -98,11 +99,15 @@ h1{
 
 .noError{
     opacity: 0;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: red;
+    bottom: -20px;
 }
 
 .btn_login{
     width: fit-content;
-    margin: 0 auto;
+    margin: 1rem auto;
     
     padding: 0.4rem  0.8rem;
     border: none;

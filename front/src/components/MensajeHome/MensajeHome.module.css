@@ -1,0 +1,15 @@
+.mensaje{
+    margin: 1rem auto 2rem;
+    display: block;
+    border: 1px solid #eee;
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 2rem;
+    border-radius: 1.6rem;
+    -webkit-border-radius: 1.6rem;
+    -moz-border-radius: 1.6rem;
+    -ms-border-radius: 1.6rem;
+    -o-border-radius: 1.6rem;
+    width: 80%;
+    max-width: 400px;
+}
