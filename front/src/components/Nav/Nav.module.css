@@ -7,8 +7,9 @@
         position: absolute;
         z-index: 1;
         
-
     }
+
+
     .menu{
         margin: 0;
         margin-bottom: 1rem;
@@ -16,6 +17,7 @@
         justify-content: center;
         gap: 1rem;
     }
+
     .menu > .link{
         
         color: #EEEEEE;

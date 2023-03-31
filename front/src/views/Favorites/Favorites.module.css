@@ -5,12 +5,15 @@
 }
 
 .title{
-    margin: 1;
+    margin: 2rem;
     font-size: 1.8rem;
     color: #ddd;
 
 }
 
+.selectores{
+    margin: 1rem;
+}
 .image{
     width: 100px;
     display: flex;

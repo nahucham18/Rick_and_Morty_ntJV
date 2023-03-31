@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom"
 
 
 
+
 import style from './Nav.module.css'
 
 const Nav =({onSearch, logout})=>{

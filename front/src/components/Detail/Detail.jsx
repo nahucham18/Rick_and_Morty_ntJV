@@ -24,7 +24,7 @@ const Detail = ()=>{
 
     return (
         <div className={style.container}>
-
+            <div className={style.up}></div>
         <Link className={style.btn} to={`/home`}>Volver</Link>
         
             <h2 className={style.title}>{character.name}</h2>

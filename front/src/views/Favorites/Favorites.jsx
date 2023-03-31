@@ -2,6 +2,7 @@ import style from './Favorites.module.css'
 import { connect } from 'react-redux'
 import React from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import { filterGender, orderFav } from '../../redux/actions/actions'
 
 class Favorites extends React.Component {
@@ -37,7 +38,7 @@ class Favorites extends React.Component {
         return(
             <div className={style.container}>
                 <h2 className={style.title}>My Favorites</h2>
-                <div>
+                <div className={style.selectores}>
                     <select onChange={handleOrder} name="" id="">
                         <option value="Order" selected disabled>Order</option>
                         <option value="Ascendente" >Ascendente</option>
@@ -58,10 +59,12 @@ class Favorites extends React.Component {
                     {
                     
                         this.props.myFavorites.map( (fav) => {
-                            return  <div className={style.fav} key={fav.id}>
-                                        <img className={style.image} src={fav.image} alt={fav.name} />
-                                        <span>{fav.id}</span>
-                                    </div>
+                            return  <Link to={`detail/${fav.id}`}>
+                                        <div className={style.fav} key={fav.id}>
+                                            <img className={style.image} src={fav.image} alt={fav.name} />
+                                            <span>{fav.id}</span>
+                                        </div>
+                                    </Link>
                         })
                     }
                 </div>

@@ -8,8 +8,6 @@
     margin: 0 auto;
     
     width: 100vw;
-
-    border: 1px solid red;
     
 }
 
@@ -23,7 +21,6 @@
     width: 80%;
     margin-bottom: 2rem;
     
-    border:1px solid green
     
 }
 
@@ -41,7 +38,7 @@
 
 @media (min-width: 768px){
     .container{
-        width: 100%;
+        width: 90%;
     }
 
     .container_cards{
