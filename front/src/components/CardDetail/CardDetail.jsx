@@ -5,10 +5,8 @@ import style from './CardDetail.module.css'
 const CardDetail = (props) =>{
 
     const {character} = props
-    console.log(character);
-    console.log(character.status);
     return(
-        <div>
+        <div className={style.container}>
             <div className={style.cardDetail}>
                 <Link className={style.btn} to={`/home`}>Volver</Link>
                 

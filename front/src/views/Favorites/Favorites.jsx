@@ -8,23 +8,14 @@ import { filterGender, orderFav } from '../../redux/actions/actions'
 class Favorites extends React.Component {
     constructor(props){
         super(props)
-
-        
     }
 
-    
-    
     componentDidMount(){
-        getFavorites()
-        
-    }
-    
+        getFavorites()      
+    }    
+
     render()
-
     {
-
-        
-
         const handleOrder = (event) =>{
             const value = event.target.value;
             this.props.orderFav(value)
@@ -57,7 +48,6 @@ class Favorites extends React.Component {
 
                 <div className={style.contain_favorites}>
                     {
-                    
                         this.props.myFavorites.map( (fav) => {
                             return  <Link to={`detail/${fav.id}`}>
                                         <div className={style.fav} key={fav.id}>

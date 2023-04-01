@@ -1,24 +1,18 @@
 .container{
     
-    margin: 0 auto;
-    
-    background-color: #ADDDD0;
-    height: 90vh;
-    position: relative;
-    
 }
+.cardDetail{
+border: 1px solid red;
+padding:0 1rem 1rem;
 
-
-.up{
-    background-color: #111;
-    height: 12vh;
-    width: 100vw;
 
 }
 
 .container_description{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap:1rem;
     text-align: start;
@@ -112,9 +106,13 @@
 }
 
 .description{
+    
+    height: fit-content;
     font-size: 1.3rem;
     font-weight: 400;
     opacity: .8;
+    border: 1px solid violet;
+    max-width: 300px;
 }
 
 .titles{

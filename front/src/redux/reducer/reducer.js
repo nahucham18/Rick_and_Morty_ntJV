@@ -1,4 +1,4 @@
-import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_GENDER, ADD_CHARACTER, DELETE_CHARACTER} from '../actions-types/actions-types'
+import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_GENDER,FILTER_GENDER_HOME, ADD_CHARACTER, DELETE_CHARACTER,FILTER_SPECIES_HOME, FILTER_STATUS_HOME} from '../actions-types/actions-types'
 
 const initialState = ({
                         homeCharacters:[],
@@ -59,6 +59,48 @@ const reducer =(state = initialState, action) =>{
             return{
                 ...state,
                 allCharacters: state.myFavorites.filter(char => char.gender === action.payload)
+                    
+            }
+        case FILTER_GENDER_HOME:
+            
+            if(action.payload === 'All'){
+                return{
+                    ...state,
+                    copyHomeCharacters: [...state.homeCharacters]
+                }
+            }
+
+            return{
+                ...state,
+                copyHomeCharacters: state.homeCharacters.filter(char => char.gender === action.payload)
+                    
+            }
+        case FILTER_SPECIES_HOME:
+            
+            if(action.payload === 'All'){
+                return{
+                    ...state,
+                    copyHomeCharacters: [...state.homeCharacters]
+                }
+            }
+
+            return{
+                ...state,
+                copyHomeCharacters: state.homeCharacters.filter(char => char.species === action.payload)
+                    
+            }
+        case FILTER_STATUS_HOME:
+            
+            if(action.payload === 'All'){
+                return{
+                    ...state,
+                    copyHomeCharacters: [...state.homeCharacters]
+                }
+            }
+
+            return{
+                ...state,
+                copyHomeCharacters: state.homeCharacters.filter(char => char.status === action.payload)
                     
             }
 

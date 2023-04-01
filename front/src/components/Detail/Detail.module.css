@@ -4,7 +4,9 @@
     
     background-color: #ADDDD0;
     height: 90vh;
+    min-height:380px;
     position: relative;
+    border: 2px solid green
     
 }
 
@@ -14,127 +16,6 @@
     height: 12vh;
     width: 100vw;
 
-}
-
-.container_description{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:1rem;
-    text-align: start;
-    height: fit-content;
-}
-
-.image{
-    
-    outline: black 5px solid;
-    width: 200px;
-    
-    border-radius: 2rem;
-    
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-}
-
-.image_container{
-    position: relative;
-    
-}
-
-
-
-.title{
-    font-size: 2rem;
-    margin: 0;
-    
-}
-
-.id{
-    margin: 0;
-}
-
-/* .container_image{
-    
-    position: relative;
-    width: 50%;
-    max-width: 200px;
-    min-width: 160px;
-    margin: 0 auto;
-} */
-
-.status_unknown{
-    background-color: rgb(244, 255, 185);
-    padding: 0 1rem 0.2rem 1rem;
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-    font-size: 1rem;
-
-    outline: 0.2rem solid rgb(255, 244, 94);
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-}
-
-.status_alive{
-    background-color: rgb(182, 252, 199);
-    padding: 0 1rem 0.2rem 1rem;
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-    font-size: 1rem;
-
-    outline: 0.2rem solid rgb(45, 255, 98);
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-}
-.status_dead{
-    background-color: rgb(252, 182, 182);
-    padding: 0 1rem 0.2rem 1rem;
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-    font-size: 1rem;
-
-    outline: 0.2rem solid rgb(255, 100, 100);
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-}
-
-.description{
-    font-size: 1.3rem;
-    font-weight: 400;
-    opacity: .8;
-}
-
-.titles{
-    
-    font-weight: 900;
-}
-
-.btn{
-    position: absolute;
-    left: 10px;
-    bottom: 1rem;
-    text-decoration: none;
-    background-color: #6F38C5;
-    color: #EEE;
-    padding:0 0.6rem;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
 }
 
 @media (min-width:576px){

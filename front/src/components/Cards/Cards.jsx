@@ -5,14 +5,14 @@ import { useSelector } from 'react-redux';
 
 export default function Cards(props) {
 
-   const {homeCharacters} = useSelector(state => state)
-   console.log(homeCharacters);
+   const {copyHomeCharacters} = useSelector(state => state)
+   
 
    return (
       <div className={style.container}>
             <div className={style.container_cards}>
             {
-               homeCharacters.map((char)=>{
+               copyHomeCharacters.map((char)=>{
                   return (
                      <Card 
                         id={char.id}
@@ -21,7 +21,7 @@ export default function Cards(props) {
                         species={char.species}
                         gender={char.gender}
                         image={char.image}
-                        
+                        status={char.status}
                         />
                   )
                })

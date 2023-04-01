@@ -26,8 +26,8 @@ const URL = "https://rickandmortyapi.com/api/character/"
 
 const getCharById = async (charID) =>{
     const character = await axios.get(URL+charID);
-    const {id,name,gender,species,image} = character.data    
-    const newCharacter = {id,name,gender,species,image}
+    const {id,name,gender,species,status,image} = character.data    
+    const newCharacter = {id,name,gender,species,status,image}
     return newCharacter;
 
     // .then((data) =>{
