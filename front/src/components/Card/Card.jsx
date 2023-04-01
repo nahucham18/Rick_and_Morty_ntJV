@@ -41,7 +41,7 @@ function Card(props) {
    }
 
    const onClose = ()=>{
-      
+      axios.delete(`http://localhost:3001/rickandmorty/fav/${id}`)
       dispatch(deleteCharacter(id))
       dispatch(deleteFav(id));
    }

@@ -2,7 +2,7 @@
     
 }
 .cardDetail{
-border: 1px solid red;
+
 padding:0 1rem 1rem;
 
 
@@ -111,7 +111,7 @@ padding:0 1rem 1rem;
     font-size: 1.3rem;
     font-weight: 400;
     opacity: .8;
-    border: 1px solid violet;
+    
     max-width: 300px;
 }
 
