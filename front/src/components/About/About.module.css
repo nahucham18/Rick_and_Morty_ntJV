@@ -1,8 +1,10 @@
 .container{
     box-sizing: border-box;
+    background-color: #3A8B75;
     padding: 2rem;
     padding-top: 5rem;
     height: 90vh;
+    color: #ddd;
 }
 
 .title{
@@ -12,4 +14,10 @@
 .subtitle{
     margin: 0;
     font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.parrafo{
+    max-width: 800px;
+    margin: 0 auto;
 }

@@ -33,6 +33,10 @@
     background-color: #472381;
 }
 
+.input:hover{
+    border: 2px solid #472381;
+}
+
 .btn{
     padding: 0.2rem 0.4rem;
     color: #EEEEEE;
@@ -51,6 +55,7 @@
 }
 .btn:hover{
     cursor: pointer;
+    background-color: #472381;
 }
 
 .random{
@@ -72,6 +77,7 @@
 
 .random:hover{
     cursor: pointer;
+    background-color: #472381;
 }
 
 /* @media (min-width:320px){

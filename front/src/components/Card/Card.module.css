@@ -57,12 +57,14 @@
 
 
 .btn{
-    background-color: rgb(255, 167, 167);
+    background-color: rgb(255, 120, 120);
     position: absolute;
+    color: #ddd;
     right: 0.4rem;
     top: 0.4rem;
     width: 1rem;
     font-size: 0.8rem;
+    cursor: pointer;
     
 
     border: none;
@@ -71,6 +73,10 @@
     -moz-border-radius:1rem ;
     -ms-border-radius:1rem ;
     -o-border-radius:1rem ;
+}
+
+.btn:hover{
+    background-color: rgb(255, 70, 70);
 }
 
 .titulo{
