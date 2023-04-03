@@ -58,17 +58,13 @@ function Card(props) {
             }
          <Link to={`/detail/${id}`}>
             {
-               (name.length > 22)
+               (name.length > 20)
                ? <h2 className={style.titulo_medio}>{name}</h2>
                : <h2 className={style.titulo}>{name}</h2>
             }
             
          </Link>
          <img className={style.image} src={image} alt={name} />
-         <div className={style.description}>
-            <h2>{species}</h2>
-            <h2>{gender}</h2>
-         </div>
       </div>
    );
 }
