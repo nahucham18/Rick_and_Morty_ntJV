@@ -1,9 +1,16 @@
 .container{
+    padding-bottom: 2rem;
+    border: 1px solid yellow;
     
 }
 .cardDetail{
-
+border: 1px solid red;
 padding:0 1rem 1rem;
+
+
+margin: 0 auto;
+position: relative;
+max-height: 550px;
 
 
 }
@@ -122,8 +129,8 @@ padding:0 1rem 1rem;
 
 .btn{
     position: absolute;
-    left: 10px;
-    bottom: 1rem;
+    left: 0px;
+    bottom: -10px;
     text-decoration: none;
     background-color: #6F38C5;
     color: #EEE;
@@ -138,7 +145,6 @@ padding:0 1rem 1rem;
 @media (min-width:576px){
     .title{
         font-size: 3rem;
-        width: 100vw;
     }
     .container{
         box-sizing: border-box;
@@ -154,15 +160,12 @@ padding:0 1rem 1rem;
     }
 
     .image{
-        width: 400px;
+        width: 350px;
     }
     .container_description{
         
         margin:1rem  0 0 0;
-        text-align: start;
-        width: 80vw;
-        
-        
+        text-align: start;  
     }
 
     .titles{
@@ -175,7 +178,6 @@ padding:0 1rem 1rem;
 
     .id{
         font-size: 2rem;
-        width: 100vw;
     }
 
     .status_dead{
@@ -190,7 +192,23 @@ padding:0 1rem 1rem;
 }
 
 @media (min-width:768px){
+    .container{
+        width: 100%;
+    }
     .image{
         width: 350px;
+    }
+
+    .cardDetail{
+        width: 80%;
+        border: 1px solid red;
+        max-width: 800px;
+    }
+    .btn{
+        padding:0.4rem 1rem;
+        font-size: 2rem;
+        height: fit-content;
+        bottom: 0;
+        
     }
 }

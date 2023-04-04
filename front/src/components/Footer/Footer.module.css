@@ -4,7 +4,8 @@
     width: 100%;
     color: rgb(45, 45, 45);
     background-color: #EEEEEE;    
-    height: 10vh;
+    height: 100px;
+    border: 1px solid blue;
 }
 
 .p{
@@ -12,9 +13,6 @@
 }
 
 @media (min-width: 567px){
-    .footer{
-        height: 20vh;
-    }
 }
 
 
