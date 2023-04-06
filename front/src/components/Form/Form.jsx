@@ -50,21 +50,25 @@ const Form = () =>{
         <div className={style.container}>
             <img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="" className={style.imagen}/>    
             <form onSubmit={handleOnSubmit} action="" className={style.form}>
-                <h1>Login</h1>
-                <div className={style.contenedor_label}>
-                    <label className={style.label}>Username:</label>
-                        <input className={style.input} onChange={handleOnChange} type="text" name="username" />
-                        <span className={(errors.username !== 'No hay error')? style.error : style.noError}>{errors.username}</span>
-                        
-                </div>
-                
-                <div className={style.contenedor_label}>
-                    <label className={style.label}>
-                        Password: 
+                <h1 className={style.title}>Login</h1>
+                <div className={style.container_inputs}>
+                    <div className={style.contenedor_label}>
+                        <label className={style.label}>
+                            <span className={style.title_input}>Username:</span>
+                            <input className={style.input} onChange={handleOnChange} type="text" name="username" />
+                            <h6 className={(errors.username !== 'No hay error')? style.error : style.noError}>{errors.username}</h6>
                         </label>
-                        <input className={style.input} onChange={handleOnChange} type="password" name="password" />
-                        <span className={(errors.password !== 'No hay error')? style.error : style.noError}>{errors.password}</span>
+                            
+                    </div>
                     
+                    <div className={style.contenedor_label}>
+                        <label className={style.label}>
+                        <span className={style.title_input}>Password:</span>
+                            <input className={style.input} onChange={handleOnChange} type="password" name="password" />
+                            <h6 className={(errors.password !== 'No hay error')? style.error : style.noError}>{errors.password}</h6>
+                            </label>
+                        
+                    </div>
                 </div>
 
                 <button className={style.btn_login}>LOGIN</button>

@@ -4,12 +4,19 @@ import style from './Home.module.css'
 import Selectores from '../../components/Selectores/Selectores'
 import { useSelector } from 'react-redux'
 import MensajeHome from '../../components/MensajeHome/MensajeHome'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 const Home = () =>{
 
-
-    const {homeCharacters} = useSelector(state => state)
+    const {homeCharacters} = useSelector(state=>state)
+    
+    const {access} = useSelector(state=>state)
+    const navigate = useNavigate()
+    useEffect(()=>{
+        !access && navigate('/rickandmorty');
+    },[])
 
     return (
         <div className={style.home}>

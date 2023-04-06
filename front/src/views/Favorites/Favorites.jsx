@@ -10,6 +10,7 @@ class Favorites extends React.Component {
         super(props)
     }
 
+    
     componentDidMount(){
         getFavorites()      
     }    

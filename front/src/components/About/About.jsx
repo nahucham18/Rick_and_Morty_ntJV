@@ -1,10 +1,24 @@
 import style from './About.module.css'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const About = () =>{
 
+    const navigate = useNavigate()
+    const {access} = useSelector(state=>state)
+
+    useEffect(()=>{
+        if(access === false){
+            navigate('/rickandmorty')
+        }
+    },[])
+
+
+    
 
     return(
-        <div className={style.container}>
+        <div key='1' className={style.container}>
             <div className={style.about}>
                 <h1 className={style.title}>Chamorro Nahuel</h1>
                 <h5 className={style.subtitle}>Cohorte WebFT36a</h5>

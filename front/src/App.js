@@ -10,8 +10,6 @@ import Error from './views/Error/Error'
 import Favorites from './views/Favorites/Favorites'
 
 import { useLocation, useNavigate } from 'react-router-dom'
-
-
 import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -34,8 +32,7 @@ function App () {
               pathname !== '/rickandmorty' && <Nav />
             }
       <Routes>
-        <Route path='/rickandmorty' element={<Form />}/>
-        {/* Tengo que ver el tema de las vistas , y el tema de pasar porops por vistas */}
+        <Route path='/rickandmorty' element={<Form/>}/>
         <Route path={`/rickandmorty/home`} element={<Home/>}/>  
         <Route path={'/rickandmorty/favorites'} element={<Favorites/>}/>
         <Route path={`/rickandmorty/about`} element={<About/>}/>
