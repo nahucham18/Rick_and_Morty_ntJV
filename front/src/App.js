@@ -37,13 +37,13 @@ function App () {
   
   useEffect(()=>{
 
-    !access && navigate('/');
+    !access && navigate('/rickandmorty');
   },[access])
 
   const login = (userData) =>{
     if(userData.username === username && userData.password === password){
       setAccess(true)
-      navigate('/home')
+      navigate('/rickandmorty/home')
     }else{
       window.alert('El usuario o contraseña son invalidos')
     } 
@@ -81,16 +81,16 @@ function App () {
   return (
     <div className='App' >
             {
-              pathname !== '/' && <Nav logout={logout}/>
+              pathname !== '/rickandmorty' && <Nav logout={logout}/>
             }
       <Routes>
-        <Route path='/' element={<Form login={login}/>}/>
+        <Route path='/rickandmorty' element={<Form login={login}/>}/>
         {/* Tengo que ver el tema de las vistas , y el tema de pasar porops por vistas */}
-        <Route path={`/home`} element={<Home onSearch={onSearch}/>}/>  
-        <Route path={'/favorites'} element={<Favorites/>}/>
-        <Route path={`/about`} element={<About/>}/>
-        <Route path={`/detail/:id`} element={<Detail/>}/>
-        <Route path={`/404`} element={<div>fallo 404</div>}/>
+        <Route path={`/rickandmorty/home`} element={<Home onSearch={onSearch}/>}/>  
+        <Route path={'/rickandmorty/favorites'} element={<Favorites/>}/>
+        <Route path={`/rickandmorty/about`} element={<About/>}/>
+        <Route path={`/rickandmorty/detail/:id`} element={<Detail/>}/>
+        <Route path={`/rickandmorty/404`} element={<div>fallo 404</div>}/>
       <Route path='*' element={<Favorites/>}/>
         
         

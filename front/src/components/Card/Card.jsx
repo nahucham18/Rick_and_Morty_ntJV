@@ -56,7 +56,7 @@ function Card(props) {
                   <button className={style.like} onClick={handleFavorite}>🤍</button>
                )
             }
-         <Link to={`/detail/${id}`}>
+         <Link to={`/rickandmorty/detail/${id}`}>
             {
                (name.length > 20)
                ? <h2 className={style.titulo_medio}>{name}</h2>

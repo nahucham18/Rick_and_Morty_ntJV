@@ -7,6 +7,12 @@ describe("GET rickandmorti{id}",()=>{
         expect(res.statusCode).toBe(200)
     })
 
+    it('Responde si lanza el error de si no encunetra el ID',async()=>{
+        const res = await request(server).get('/rickandmorty/onsearch/900');
+        expect(res.statusCode).toBe(404)
+        
+    })
+
     it('Responde un objeto con las propiedades: "id", "name", "species", "gender" e "image"',  async ()=>{
         const response = await request(server).get('/rickandmorty/onsearch/1');
             expect(response.body.id).toEqual(1)

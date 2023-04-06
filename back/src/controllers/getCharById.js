@@ -26,6 +26,7 @@ const URL = "https://rickandmortyapi.com/api/character/"
 
 const getCharById = async (charID) =>{
     const character = await axios.get(URL+charID);
+    if(!character)throw new Error('No existe el personaje con este ID')
     const {id,name,gender,species,status,image} = character.data    
     const newCharacter = {id,name,gender,species,status,image}
     return newCharacter;

@@ -8,7 +8,7 @@ const CardDetail = (props) =>{
     return(
         <div className={style.container}>
             <div className={style.cardDetail}>
-                <Link className={style.btn} to={`/home`}>Volver</Link>
+                <Link className={style.btn} to={`/rickandmorty/home`}>Volver</Link>
                 
                 <h2 className={style.title}>{character.name}</h2>
                 <h2 className={style.id}>{character.id}</h2>
