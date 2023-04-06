@@ -5,6 +5,7 @@ import style from './CardDetail.module.css'
 const CardDetail = (props) =>{
 
     const {character} = props
+    console.log(character);
     return(
         <div className={style.container}>
             <div className={style.cardDetail}>

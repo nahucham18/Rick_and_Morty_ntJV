@@ -1,4 +1,4 @@
-import { ADD_FAV , DELETE_FAV, FILTER_GENDER,FILTER_GENDER_HOME, ORDER_FAV, ADD_CHARACTER, DELETE_CHARACTER, FILTER_SPECIES_HOME, FILTER_STATUS_HOME} from "../actions-types/actions-types";
+import { ADD_FAV , DELETE_FAV, FILTER_GENDER,FILTER_GENDER_HOME, ORDER_FAV, ADD_CHARACTER, DELETE_CHARACTER, FILTER_SPECIES_HOME, FILTER_STATUS_HOME, ACCESS, DONT_ACCESS} from "../actions-types/actions-types";
 
 export const addCharacter = (character) =>{
     return{type: ADD_CHARACTER ,payload:character}
@@ -32,3 +32,9 @@ export const deleteCharacter = (id) =>{
     return {type: DELETE_CHARACTER, payload:id}
 }
 
+export const access = ( )=>{
+    return{type: ACCESS}
+}
+export const dontAccess = ( )=>{
+    return{type: DONT_ACCESS}
+}

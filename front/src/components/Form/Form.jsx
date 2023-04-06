@@ -1,9 +1,18 @@
+import { useDispatch } from 'react-redux'
 import style from './Form.module.css'
 import validation from './Validation'
+import { access } from '../../redux/actions/actions'
 
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const Form = ({login}) =>{
+const Form = () =>{
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const username = 'nahucham@gmail.com';
+    const password = '123asd';
 
     const [ userData, setUserData] = useState({
         username:'',
@@ -27,10 +36,14 @@ const Form = ({login}) =>{
     }
 
     const handleOnSubmit = (event) =>{
-        login(userData)
-        event.preventDefault()
-    }    
-
+        if(userData.username === username && userData.password === password){
+            dispatch(access())
+            navigate('/rickandmorty/home')
+        }else{
+            window.alert('El usuario o contraseña son invalidos')
+            event.preventDefault()
+        }
+    }
 
     return (
         

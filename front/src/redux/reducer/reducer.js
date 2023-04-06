@@ -1,13 +1,14 @@
-import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_GENDER,FILTER_GENDER_HOME, ADD_CHARACTER, DELETE_CHARACTER,FILTER_SPECIES_HOME, FILTER_STATUS_HOME} from '../actions-types/actions-types'
+import { ADD_FAV, DELETE_FAV, ORDER_FAV, FILTER_GENDER,FILTER_GENDER_HOME, ADD_CHARACTER, DELETE_CHARACTER,FILTER_SPECIES_HOME, FILTER_STATUS_HOME, ACCESS, DONT_ACCESS} from '../actions-types/actions-types'
 
 const initialState = ({
+                        access:false,
                         homeCharacters:[],
                         copyHomeCharacters:[],
                         myFavorites:[],
                         allCharacters:[]
                         })
 
-const {Characters} = initialState
+const {characters} = initialState
 
 const reducer =(state = initialState, action) =>{
     switch(action.type){
@@ -16,6 +17,18 @@ const reducer =(state = initialState, action) =>{
                 ...state,
                 homeCharacters:[...state.homeCharacters,action.payload],
                 copyHomeCharacters:[...state.homeCharacters,action.payload]
+            }
+        case ACCESS:
+                return{
+                    ...state,
+                    access:true,
+                }
+            
+
+        case DONT_ACCESS:    
+            return{
+                ...state,
+                access:false,
             }
 
         case ADD_FAV:

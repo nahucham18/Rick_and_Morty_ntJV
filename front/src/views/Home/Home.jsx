@@ -6,12 +6,8 @@ import { useSelector } from 'react-redux'
 import MensajeHome from '../../components/MensajeHome/MensajeHome'
 
 
-const Home = ({onSearch}) =>{
+const Home = () =>{
 
-    const charRandom = (event) =>{
-        let idRandom = Math.floor(Math.random() * 826)+1;
-        onSearch(idRandom)
-    }
 
     const {homeCharacters} = useSelector(state => state)
 
@@ -23,8 +19,7 @@ const Home = ({onSearch}) =>{
             </div>
                 
             <div className={style.divDown}>
-                <SearchBar onSearch={onSearch}
-                            charRandom={charRandom}/>
+                <SearchBar/>
                 <Selectores/>
                 
                 {
