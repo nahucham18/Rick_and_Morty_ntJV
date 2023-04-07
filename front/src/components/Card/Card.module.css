@@ -87,12 +87,12 @@
 
 @media ( min-width: 576px) {
     .image{
-        width:140px
+        width:140px;
     }
 }
 @media ( min-width: 768px) {
     .image{
-        width:140px
+        width:140px;
     }
     .container{
         height: 140px;

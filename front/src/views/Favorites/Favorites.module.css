@@ -1,5 +1,5 @@
 .container {
-    padding-top:2rem ;
+    padding:3rem 0 ;
     background-color: #6F38C5;
     min-height: 80vh;
 }
@@ -12,43 +12,69 @@
 }
 
 .selectores{
-    margin: 1rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.selector{
+    background-color: #ddd;
+    color: #111;
+    padding: 0.4rem;
+    font-weight: 600;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
 }
 .image{
     width: 95%;
     margin: 0.2rem auto 0;
     display: flex;
-    border: 1px solid black;
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
+    border: 2px solid black;
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
 }
 
 .contain_favorites{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    
+    justify-content: center;
     gap: 0.8rem;
-    padding: 1rem 0.6rem;
-    max-width: 1000px;
+    width: fit-content;
+    max-width: 500px;
     margin: 0 auto;
+    
 }
 
 .fav{
     background-color: #ADDDD0;
     color: #111;
     font-weight: 900;
-    padding: 0.2rem;
+    padding: 0.4rem;
     box-shadow: 2px 2px 3px black;
-    border: 1px solid #111;
+    border: 2px solid #111;
     border-radius: 0.8rem;
     -webkit-border-radius: 0.8rem;
     -moz-border-radius: 0.8rem;
     -ms-border-radius: 0.8rem;
     -o-border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
     width: 100px;
+}
+.id{
+    width: fit-content;
+    margin: 0 auto  ;
+    
+    padding-top: 0.2rem;
+    
 }
 
 .link{
@@ -56,14 +82,14 @@
 }
 
 @media (min-width:576px){
-    .contain_favorites{
-        padding: 1rem 3rem;
-    }
-    .contain_favorites{
-        gap: 1.6rem;
-    }
     .fav{
-        width: 150px;
+        width: 120px;
+    }
+
+    .contain_favorites{
+        max-width: 673px;
+        width: 90%;
+        gap: 0.9rem;
     }
     .id{
         font-size: 1.2rem;
@@ -71,11 +97,11 @@
 }
 
 @media(min-width: 768px){
-    .fav{
-        width:180px
+    .title{
+        font-size: 3rem;
     }
-    .id{
-        font-size: 1.8rem;
+    .contain_favorites{
+        max-width: 800px;
     }
 }
 

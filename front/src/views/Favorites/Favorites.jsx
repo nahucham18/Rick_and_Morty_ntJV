@@ -31,13 +31,13 @@ class Favorites extends React.Component {
             <div className={style.container}>
                 <h2 className={style.title}>My Favorites</h2>
                 <div className={style.selectores}>
-                    <select onChange={handleOrder} name="" id="">
+                    <select className={style.selector} onChange={handleOrder} name="" id="">
                         <option value="Order" selected disabled>Order</option>
                         <option value="Ascendente" >Ascendente</option>
                         <option value="Descendente">Descendente</option>
                     </select>
 
-                    <select onChange={handleGender} name="" id="">
+                    <select className={style.selector} onChange={handleGender} name="" id="">
                         <option value="Gender" selected disabled>Gender</option>
                         <option value="All">All</option>
                         <option value="Male">Male</option>
