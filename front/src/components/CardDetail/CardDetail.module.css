@@ -1,10 +1,8 @@
 .container{
     padding-bottom: 2rem;
-    border: 1px solid yellow;
-    
+    height: fit-content;
 }
 .cardDetail{
-border: 1px solid red;
 padding:0 1rem 1rem;
 
 
@@ -129,7 +127,7 @@ max-height: 550px;
 
 .btn{
     position: absolute;
-    left: 0px;
+    left: 20px;
     bottom: -10px;
     text-decoration: none;
     background-color: #6F38C5;
@@ -149,10 +147,9 @@ max-height: 550px;
     .container{
         box-sizing: border-box;
         display: flex;
-        flex-direction: row;   
+        flex-direction: column;   
         justify-content: center;     
         flex-wrap: wrap;
-        height: 90vh;
     }
 
     .up{
@@ -160,7 +157,7 @@ max-height: 550px;
     }
 
     .image{
-        width: 350px;
+        width: 250px;
     }
     .container_description{
         
@@ -181,13 +178,28 @@ max-height: 550px;
     }
 
     .status_dead{
-        font-size: 0.8rem;
+        font-size: 1.4rem;
         right: 15px;
-        bottom: 35px;
+        bottom: 0px;
     }
 
     .status_alive{
-        position: absolute;
+        font-size: 1.4rem;
+        right: 15px;
+        bottom: 0px;
+    }
+    .status_unknown{
+        font-size: 1.4rem;
+        right: 15px;
+        bottom: 0px;
+    }
+
+    .btn{
+        padding:0.4rem 1rem;
+        font-size: 2rem;
+        height: fit-content;
+        bottom: -50px;
+        
     }
 }
 
@@ -201,14 +213,13 @@ max-height: 550px;
 
     .cardDetail{
         width: 80%;
-        border: 1px solid red;
         max-width: 800px;
     }
     .btn{
         padding:0.4rem 1rem;
         font-size: 2rem;
         height: fit-content;
-        bottom: 0;
+        bottom: -50px;
         
     }
 }

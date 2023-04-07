@@ -50,10 +50,10 @@ class Favorites extends React.Component {
                 <div className={style.contain_favorites}>
                     {
                         this.props.myFavorites.map( (fav) => {
-                            return  <Link to={`detail/${fav.id}`}>
+                            return  <Link to={`detail/${fav.id}`} className={style.link}>
                                         <div className={style.fav} key={fav.id}>
                                             <img className={style.image} src={fav.image} alt={fav.name} />
-                                            <span>{fav.id}</span>
+                                            <span className={style.id}>{fav.id}</span>
                                         </div>
                                     </Link>
                         })

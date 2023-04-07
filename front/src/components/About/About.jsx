@@ -9,7 +9,7 @@ const About = () =>{
     const {access} = useSelector(state=>state)
 
     useEffect(()=>{
-        if(access === false){
+        if(!access){
             navigate('/rickandmorty')
         }
     },[])
@@ -18,7 +18,7 @@ const About = () =>{
     
 
     return(
-        <div key='1' className={style.container}>
+        <div className={style.container}>
             <div className={style.about}>
                 <h1 className={style.title}>Chamorro Nahuel</h1>
                 <h5 className={style.subtitle}>Cohorte WebFT36a</h5>

@@ -177,3 +177,9 @@
         margin: 0 auto;
     }
 }
+
+@media (min-width: 768px){
+    .imagen{
+        max-width: 450px;
+    }
+}

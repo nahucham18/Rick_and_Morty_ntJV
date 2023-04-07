@@ -77,9 +77,10 @@
 
 @media( min-width: 1200px){
     .nav{
-        padding-right: 310px;
-        
-        right: 50%;
+        margin: 1rem;
+    }
+    .menu > .link, .logout{
+        font-size: 1.2rem;
     }
 }
 

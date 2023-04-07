@@ -23,7 +23,7 @@ function App () {
 
   useEffect(()=>{
     !access && navigate('/rickandmorty');
-  },[access])
+  },[])
 
 
   return (
@@ -37,6 +37,7 @@ function App () {
         <Route path={'/rickandmorty/favorites'} element={<Favorites/>}/>
         <Route path={`/rickandmorty/about`} element={<About/>}/>
         <Route path={`/rickandmorty/detail/:id`} element={<Detail/>}/>
+        <Route path={`/rickandmorty/favorites/detail/:id`} element={<Detail/>}/>
         <Route path={`/rickandmorty/404`} element={<div>fallo 404</div>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>

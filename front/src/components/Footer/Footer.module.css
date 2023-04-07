@@ -4,14 +4,19 @@
     width: 100%;
     color: rgb(45, 45, 45);
     background-color: #EEEEEE;    
-    height: 100px;
-    border: 1px solid blue;
+    height: 20vh;
+    
 }
 
 .p{
     margin: 0;
 }
 
+@media (min-width: 567px){
+    .footer{
+        height: 20vh;
+    }
+}
 @media (min-width: 567px){
 }
 

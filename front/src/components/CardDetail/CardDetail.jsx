@@ -1,15 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import style from './CardDetail.module.css'
 
 
 const CardDetail = (props) =>{
 
+    const {pathname} = useLocation()
     const {character} = props
-    console.log(character);
     return(
         <div className={style.container}>
             <div className={style.cardDetail}>
-                <Link className={style.btn} to={`/rickandmorty/home`}>Volver</Link>
+                <Link className={style.btn} to={
+                    (pathname.includes('favorites'))
+                    ?`/rickandmorty/favorites`
+                    :`/rickandmorty/home`
+                    }>Volver</Link>
                 
                 <h2 className={style.title}>{character.name}</h2>
                 <h2 className={style.id}>{character.id}</h2>
