@@ -18,4 +18,8 @@ Character.belongsToMany(Episode,{ through:"CharacterEpisode"});
 Episode.belongsToMany(Character,{ through:"CharacterEpisode"});
 
 
-module.exports = database;
+module.exports = {
+    database,
+    ...database.models,
+}
+    ;
