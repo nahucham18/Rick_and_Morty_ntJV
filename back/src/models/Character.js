@@ -25,6 +25,8 @@ module.exports = (database) =>{
         species: {
             type:DataTypes.STRING,
         },
+    },{
+        timestamps: false,
     });
 
 };
