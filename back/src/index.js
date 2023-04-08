@@ -1,9 +1,8 @@
 const server = require('./server')
 const PORT= 3001;
-const {database} = require('./db');
+const { conn } = require('./DB_connection');
 
-
-database
+conn
 .sync({ force:true })
 .then(()=>{
     server.listen(PORT,()=>{
