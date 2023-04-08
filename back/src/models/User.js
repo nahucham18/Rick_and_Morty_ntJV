@@ -13,9 +13,13 @@ module.exports = (database) =>{
             isEmail:true,
             allowNull:false,
             len:[5,30],
+        },
+        password:{
+            type:DataTypes.STRING,
+            allowNull:false
         }
     },
     {
-        tomestamps: false,
+        timestamps: false,
     })
 }
