@@ -7,9 +7,9 @@ const Footer = () =>{
     return (
         <footer className={style.footer}>
             <p className={style.p}>Creado por Nahuel Chamorro</p>
-            <img src={imgWpp} alt='whatsapp' />
-            <img src={imgLink} alt='Linkedin' />
-            <img src={imgGit} alt='GitHub' />
+            <img className={style.imagenRed} src={imgWpp} alt='whatsapp' />
+            <img className={style.imagenRed} src={imgLink} alt='Linkedin' />
+            <img className={style.imagenRed} src={imgGit} alt='GitHub' />
         </footer>
     )
 }
