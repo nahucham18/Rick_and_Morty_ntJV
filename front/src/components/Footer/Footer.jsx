@@ -10,6 +10,7 @@ const Footer = () =>{
             <img className={style.imagenRed} src={imgWpp} alt='whatsapp' />
             <img className={style.imagenRed} src={imgLink} alt='Linkedin' />
             <img className={style.imagenRed} src={imgGit} alt='GitHub' />
+            <p className={style.copy}>Copyrigth © 2023 Todo los derechos reservados</p>
         </footer>
     )
 }

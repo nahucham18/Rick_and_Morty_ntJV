@@ -58,9 +58,14 @@ function Card(props) {
             }
          <Link to={`/rickandmorty/detail/${id}`}>
             {
-               (name.length > 20)
-               ? <h2 className={style.titulo_medio}>{name}</h2>
+               (name.length > 15)
+               ? (name.length > 20)
+                  ? (name.length > 27)
+                     ? <h2 className={style.titulo_xl}>{name}</h2>
+                     : <h2 className={style.titulo_grande}>{name}</h2>
+                  :<h2 className={style.titulo_medio}>{name}</h2>
                : <h2 className={style.titulo}>{name}</h2>
+
             }
             
          </Link>

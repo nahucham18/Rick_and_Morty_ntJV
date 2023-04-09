@@ -22,7 +22,7 @@ const Home = () =>{
         <div className={style.home}>
             <div className={style.image}>
                 <h1 className={style.title}>Rick And Morty App</h1>
-                <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta quis similique eligendi fugiat quidem modi ullam? Nostrum corporis consectetur repellendus sequi quis dolore eaque minima atque commodi, assumenda nisi?</p>
+                <p className={style.description}>Esta aplicación esta diseñada para buscar especificamente o aleatoriamente entre los 826 personajes que aparecen en la serie de Rick and Morty, podras ver sus detalles como también marcar tus favoritos para luego verlos en la sección "Favorites". </p>
             </div>
                 
             <div className={style.divDown}>

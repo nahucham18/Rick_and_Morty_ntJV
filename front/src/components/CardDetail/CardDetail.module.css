@@ -10,6 +10,8 @@ margin: 0 auto;
 position: relative;
 max-height: 550px;
 
+border: 1px solid red;
+
 
 }
 
@@ -206,9 +208,10 @@ max-height: 550px;
 @media (min-width:768px){
     .container{
         width: 100%;
+        border: 1px solid yellow;
     }
     .image{
-        width: 350px;
+        width: 250px;
     }
 
     .cardDetail{

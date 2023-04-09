@@ -22,8 +22,8 @@ const About = () =>{
             <div className={style.about}>
                 <h1 className={style.title}>Chamorro Nahuel</h1>
                 <h5 className={style.subtitle}>Cohorte WebFT36a</h5>
-                <p className={style.parrafo}>Soy Nahuel Chamorro, a la mitad del 2022 que me entre a este mundo de la programacion, siendo la rama de desarrollo Web lo que mas me llamo la atención. <br/><br/> Hice un par de cursos,a la vez  siendo autodidacta, investigando y tratando de resolver algunos problemas que me surgian en mis proyectos.</p>
-                <p className={style.parrafo}>Recientemete, estoy cursando el Bootcamp de <span>Soy Henry</span> la carrera de dev full-stack, aunque siento que mi lado por la que me tiro mas es por la parte Front-end</p>
+                <p className={style.parrafo}>Mi nombre es Nahuel Chamorro, a mediados del 2022 comence a estudiar programacion de manera autodidacta realizando cursos y volcando esos conocimientos en proyectos, de esta manera es que descubri que la rama de la programación que mas me gusta es el Desarrollo Web. <br/><br/></p>
+                <p className={style.parrafo}>Este Año me inicie en <span>Soy Henry</span> la carrera de full-stack para ampliar mis conocimientos y poder abrirme en el ámbito laboral, gracias a Henry pude desarrollar esta App aplicando las tecnologias que vimos a lo largo del Bootcamp.</p>
             </div>
         </div>
     )
