@@ -31,14 +31,14 @@ router.get('/rickandmorty/user',async(req,res)=>{
 })
 
 router.post('/rickandmorty/user',async(req,res)=>{
-    const { user, password } =req.body;
-    console.log( user);
+    const { email, password } = req.body;
+    console.log( email);
     console.log(password);
     try {
-        const newUser = await postUser(user,password);
+        const newUser = await postUser(email,password);
         res.status(200).json(newUser);
     } catch (error) {
-        res.status(400).json(error.message)
+        res.status(404).json({error: error.message})
     }
 })
 

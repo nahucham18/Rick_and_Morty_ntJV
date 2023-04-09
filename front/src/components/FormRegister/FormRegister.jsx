@@ -1,18 +1,16 @@
 import { useDispatch } from 'react-redux'
-import style from './Form.module.css'
-import validation from './Validation'
+import style from './FormRegister.module.css'
+import validation from '../Form/Validation'
 import { access } from '../../redux/actions/actions'
+import axios from 'axios'
 
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Form = () =>{
-
+const FormRegister = () =>{
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const email = 'nahucham@gmail.com';
-    const password = '123asd';
 
     const [ userData, setUserData] = useState({
         email:'',
@@ -33,31 +31,36 @@ const Form = () =>{
     setErrors(validation({
             ...userData,
             [event.target.name]: event.target.value,}))
-
     }
 
-    const handleOnSubmit = (event) =>{
-        if(userData.email === email && userData.password === password){
-            dispatch(access())
-            navigate('/rickandmorty/home')
-        }else{
-            window.alert('El usuario o contraseña son invalidos')
-            event.preventDefault()
-        }
+    const handleOnSubmit = async(event) =>{
+        event.preventDefault()  
+        console.log(userData);  
+        await axios.post('http://localhost:3001/rickandmorty/user',{
+            email: userData.email,
+            password: userData.password
+        }).then(response =>{
+            console.log(response.data);
+        }).catch(error=>{
+            console.log(error.response.data.error);
+        })
+    
+        
     }
+
 
     return (
         
         <div className={style.container}>
             <img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="" className={style.imagen}/>    
             <form onSubmit={handleOnSubmit} action="" className={style.form}>
-                <h1 className={style.title}>Login</h1>
+                <h1 className={style.title}>Register</h1>
                 <div className={style.container_inputs}>
                     <div className={style.contenedor_label}>
                         <label className={style.label}>
                             <span className={style.title_input}>Email:</span>
                             <input className={style.input} onChange={handleOnChange} type="text" name="email" />
-                            <h6 className={(errors.email !== 'No hay error')? style.error : style.noError}>{errors.email}</h6>
+                            <h6 className={(errors.email !== 'No hay error')? style.error : style.noError}>{errors.username}</h6>
                         </label>
                             
                     </div>
@@ -72,14 +75,11 @@ const Form = () =>{
                     </div>
                 </div>
 
-                <button className={style.btn_login}>LOGIN</button>
-                <Link to={'/rickandmorty/register'}>
-                    <span>Sing up / Registrate</span>
-                </Link>
-            
+                <button className={style.btn_login}>Register</button>
+                <Link to="/rickandmorty">Login</Link>
             </form>
         </div>
     )
 }
 
-export default Form
+export default FormRegister;

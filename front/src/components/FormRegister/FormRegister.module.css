@@ -1,0 +1,185 @@
+.container{
+    box-sizing: border-box;
+    background-color: #6F38C5;
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    height: 90vh;
+    padding: 0 2rem 1rem;
+    min-height: 450px;
+    
+}
+
+.imagen{
+    width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+.form{
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: #87A2FB;
+    padding:0.4rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+
+    
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius:1.5rem ;
+    -webkit-border-radius:1.5rem ;
+    -moz-border-radius:1.5rem ;
+    -ms-border-radius:1.5rem ;
+    -o-border-radius:1.5rem ;
+}
+
+.title{
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.container_inputs{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    
+}
+
+.contenedor_label{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    margin: 0 auto;
+    min-height: 50px;    
+    
+}
+
+.label{
+    margin: 1rem auto;
+    width: 100%;
+}
+
+
+
+.input {
+    box-sizing: border-box;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    
+    
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+
+}
+
+.error{
+    opacity: 1;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: red;
+    
+    
+    bottom: -20px;
+    
+}
+
+.noError{
+    opacity: 0;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: red;
+    bottom: -20px;
+}
+
+.btn_login{
+    width: fit-content;
+    margin: 1rem auto;
+    
+    padding: 0.4rem  0.8rem;
+    border: none;
+    border-radius:1rem ;
+    -webkit-border-radius:1rem ;
+    -moz-border-radius:1rem ;
+    -ms-border-radius:1rem ;
+    -o-border-radius:1rem ;
+}
+
+@media (min-width:576px){
+    .container{
+        justify-content: flex-start;
+        min-height: 500px;
+    }
+
+    .form{
+        padding: 1rem;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contenedor_label{
+        height: 70px;
+    }
+
+    .label{
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        font-size: 1.2rem;
+        height: 40px;
+    }
+
+    .title_input{
+        font-size: 1.4rem;
+    }
+
+    .input{
+        width: 60%;
+        margin-left: 10px;
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+    .imagen{
+        max-width: 250px;
+    }
+
+    .title{
+        margin: 0;
+        margin-bottom: 0.6rem;
+        font-size: 2rem;
+    }
+
+    .btn_login{
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px){
+    .imagen{
+        max-width: 450px;
+    }
+}

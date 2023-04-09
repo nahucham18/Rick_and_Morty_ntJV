@@ -1,5 +1,6 @@
 import './App.css'
 import Form from './components/Form/Form'
+import FormRegister from './components/FormRegister/FormRegister'
 import Nav from './components/Nav/Nav'
 import About from './components/About/About'
 import Detail from './components/Detail/Detail'
@@ -29,10 +30,11 @@ function App () {
   return (
     <div className='App' >
             {
-              pathname !== '/rickandmorty' && <Nav />
+              (pathname !== '/rickandmorty' && pathname !== '/rickandmorty/register') && <Nav />
             }
       <Routes>
         <Route path='/rickandmorty' element={<Form/>}/>
+        <Route path='/rickandmorty/register' element={<FormRegister/>}/>
         <Route path={`/rickandmorty/home`} element={<Home/>}/>  
         <Route path={'/rickandmorty/favorites'} element={<Favorites/>}/>
         <Route path={`/rickandmorty/about`} element={<About/>}/>
