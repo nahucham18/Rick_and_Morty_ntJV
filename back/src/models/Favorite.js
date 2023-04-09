@@ -11,7 +11,7 @@ module.exports = (database)=>{
             type:DataTypes.STRING,
             allowNull: false,
         },
-        stats:{
+        status:{
             type:DataTypes.ENUM('Alive','Dead','unknown'),
             defaultValue: 'Alive',
         },
@@ -28,5 +28,8 @@ module.exports = (database)=>{
             type:DataTypes.STRING,
             isUrl: true,
         },
+    },
+    {
+        timestamps:false,
     })
 }

@@ -1,10 +1,10 @@
-let fav = require ('../utils/fav')
+const {Favorite} = require('../DB_connection')
 
 
 
-const getFav =  () =>{
-        console.log(`FAV DE GET ${fav}`);
-        return fav
+const getFav =  async() =>{
+        const favorites =  await Favorite.findAll()
+        return favorites
 }
 
 module.exports = getFav;

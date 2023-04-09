@@ -1,11 +1,10 @@
-let fav = require ('../utils/fav')
+const {Favorite} = require('../DB_connection')
 
-const deleteFav = (id) =>{
-    const charDelete = fav.find(fav=> fav.id == id)
-    if(!charDelete) throw new Error ('No existe character')
-
-    fav = fav.filter(fav=> fav.id != id)
-    return charDelete;
+const deleteFav = async(id) =>{
+    const favorite = await Favorite.findByPk(id);
+    await favorite.destroy()
+    const favorites = Favorite.findAll()
+    return favorites;
 }
 
 module.exports = deleteFav;

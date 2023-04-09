@@ -1,13 +1,15 @@
-let fav = require('../utils/fav')
+const { Favorite } = require ('../DB_connection')
 
-console.log(fav);
+const postFav = async(name,origin,status,image,species,gender) =>{
+    if(![name,origin,status,image,species,gender].every(Boolean))throw new Error('Faltan datos')
 
-const postFav = (character) =>{
-    const repetido = fav.find(fav => fav.id == character.id)
-    if(repetido) throw Error ('Es repetido')
-    fav.push(character)
-    console.log(`FAV DE POST ${fav}`);
-    return character
+    const [fav, created] = await Favorite.findOrCreate({
+        where:{name,origin,status,image,species,gender}
+    })
+
+    const favorites = await Favorite.findAll()
+    
+    return favorites
 
 }
 
