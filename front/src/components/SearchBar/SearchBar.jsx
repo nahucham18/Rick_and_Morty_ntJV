@@ -25,8 +25,17 @@ export default function SearchBar() {
                }else{
                   dispatch(addCharacter(data))
                }
-            }else{ window.alert('No hay personaje con ese ID')}
+            }else{ 
+                  window.alert('No hay personaje con ese ID')
+               }
+
          })
+
+         clearId();
+         
+   }
+
+   const clearId = () =>{
    }
 
    const charRandom = (event) =>{

@@ -11,14 +11,13 @@
     
     padding-top: 3rem;
     
-    
 }
 
 
 .up{
     background-color: #111;
     height: 12vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     max-width: 1600px;
     top: 0
@@ -27,67 +26,27 @@
 }
 
 @media (min-width:576px){
-    .title{
-        font-size: 3rem;
-        width: 100vw;
-    }
     .container{
         box-sizing: border-box;
         display: flex;
         flex-direction: column;   
         justify-content: center;     
-        flex-wrap: wrap;
-        height: 90vh;
-        min-height: 900px;
+        height: 80vh;
+        
+        
     }
 
     .up{
         height: 10vh;
     }
-
-    .image{
-        width: 400px;
-    }
-    .container_description{
-        
-        margin:1rem  0 0 0;
-        text-align: start;
-        width: 80vw;
-        
-        
-    }
-
-    .titles{
-        font-size: 2rem;
-    }
-
-    .description{
-        font-size: 2rem;
-    }
-
-    .id{
-        font-size: 2rem;
-        width: 100vw;
-    }
-
-    .status_dead{
-        font-size: 0.8rem;
-        right: 15px;
-        bottom: 35px;
-    }
-
-    .status_alive{
-        position: absolute;
-    }
 }
 
 @media (min-width:768px){
-    .image{
-        width: 350px;
-    }
     .container{
-        
-        min-height: 700px;
+        justify-content: flex-start;
+        padding-top: 6rem;
+        height: 550px;
+        min-height: 650px;
     }
 }
 

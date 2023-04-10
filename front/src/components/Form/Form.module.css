@@ -10,6 +10,7 @@
     padding: 0 2rem 1rem;
     min-height: 450px;
     
+    
 }
 
 .imagen{
@@ -43,6 +44,11 @@
     margin: 0;
     margin-bottom: 1rem;
     font-size: 1.6rem;
+    color:  #fff;
+}
+
+.title_input{
+    color: #fff;
 }
 
 .container_inputs{
@@ -69,6 +75,10 @@
 .label{
     margin: 1rem auto;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 
@@ -115,6 +125,10 @@
 }
 
 .btn_login{
+    font-weight: 900;
+    cursor: pointer;
+    color: #ddd;
+    background-color: #547afa;
     width: fit-content;
     margin: 1rem auto;
     
@@ -126,6 +140,22 @@
     -ms-border-radius:1rem ;
     -o-border-radius:1rem ;
 }
+
+.btn_login:hover{
+    background-color: #7291fa;
+}
+
+.enlace_register{
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.register{
+    font-weight: 200;
+
+    color: #fff;
+}
+
 
 @media (min-width:576px){
     .container{
@@ -156,9 +186,15 @@
     .title_input{
         font-size: 1.4rem;
     }
+    .title_input{
+        
+        width: 30%;
+        text-align: end;
+    }
 
     .input{
-        width: 60%;
+        width: 70%;
+        max-width: 250px;
         margin-left: 10px;
         height: 2rem;
         font-size: 1.2rem;
@@ -181,5 +217,9 @@
 @media (min-width: 768px){
     .imagen{
         max-width: 450px;
+    }
+
+    .container{
+        min-height: 650px;
     }
 }

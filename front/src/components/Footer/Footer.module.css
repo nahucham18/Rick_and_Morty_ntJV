@@ -4,7 +4,6 @@
     width: 100%;
     color: rgb(45, 45, 45);
     background-color: #EEEEEE;    
-    height: 20vh;
     padding: 1rem;
 }
 
@@ -18,18 +17,23 @@
 .p{
     margin: 0 0 1rem;
     opacity: 0.8;
+    font-size: 0.8rem;
 }
 
 .copy{
     opacity: 0.5;
+    font-size: 0.8rem;
 }
 
-@media (min-width: 567px){
-    .footer{
-        height: 20vh;
+@media (min-width: 576px){
+
+    .p{
+        font-size: 1rem;
     }
-}
-@media (min-width: 567px){
+
+    .copy{
+        font-size: 1rem;
+    }
 }
 
 

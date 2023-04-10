@@ -25,15 +25,15 @@ const CardDetail = (props) =>{
                             {character.status === 'unknown' && <h2 className={style.status_unknown}>{character.status}</h2>}
                     </div>
                     <div className={style.description}>
-                    <span className={style.titles}>Origen:</span>
-                    <span className={style.origin_name}>{character.origin?.name}</span>
+                    <span className={style.titles}>Origen: </span>
+                    <span className={style.desc}>{character.origin?.name}</span>
                         <br />
                             <span className={style.titles}>Gender: </span>
-                            <span>{character.gender}</span>
+                            <span className={style.desc}>{character.gender}</span>
                         
                         <br />
                             <span className={style.titles}>Species: </span>
-                            <span>{character.species}</span>
+                            <span className={style.desc}>{character.species}</span>
                         
                         </div>
                     </div>

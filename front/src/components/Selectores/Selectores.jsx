@@ -22,7 +22,7 @@ const Selectores = () =>{
     }
     return (
         <div className={style.container}>
-            <select onChange={handlerGender}>
+            <select className={style.selector} onChange={handlerGender}>
                 <option value="Gender" selected disabled>Gender</option>
                 <option value="All">All</option>
                 <option value="Male">Male</option>
@@ -31,7 +31,7 @@ const Selectores = () =>{
                 <option value="Genderless">Genderless</option>
             </select>
 
-            <select onChange={handlerSpecies}>
+            <select className={style.selector} onChange={handlerSpecies}>
                 <option value="Species" selected disabled>Species</option>
                 <option value="All">All</option>
                 <option value="Human">Human</option>
@@ -43,7 +43,7 @@ const Selectores = () =>{
                 <option value="Mythological Creature">Mythological Creature</option>
             </select>
 
-            <select onChange={handlerStatus}>
+            <select className={style.selector} onChange={handlerStatus}>
                 <option value="Status" selected disabled>Status</option>
                 <option value="All">All</option>
                 <option value="Alive">Alive</option>

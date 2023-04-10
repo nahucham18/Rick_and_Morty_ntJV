@@ -10,9 +10,6 @@ margin: 0 auto;
 position: relative;
 max-height: 550px;
 
-border: 1px solid red;
-
-
 }
 
 .container_description{
@@ -67,13 +64,14 @@ border: 1px solid red;
 
 .status_unknown{
     background-color: rgb(244, 255, 185);
+    color: gold;
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
     bottom: 5px;
     right: 15px;
     font-size: 1rem;
 
-    outline: 0.2rem solid rgb(255, 244, 94);
+    outline: 0.2rem solid gold;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
@@ -83,6 +81,7 @@ border: 1px solid red;
 
 .status_alive{
     background-color: rgb(182, 252, 199);
+    color: green;
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
     bottom: 5px;
@@ -98,6 +97,7 @@ border: 1px solid red;
 }
 .status_dead{
     background-color: rgb(252, 182, 182);
+    color: red;
     padding: 0 1rem 0.2rem 1rem;
     position: absolute;
     bottom: 5px;
@@ -125,6 +125,7 @@ border: 1px solid red;
 .titles{
     
     font-weight: 900;
+    color: black;
 }
 
 .btn{
@@ -142,9 +143,13 @@ border: 1px solid red;
     -o-border-radius: 2rem;
 }
 
+.btn:hover{
+    background-color:  #472381;
+}
+
 @media (min-width:576px){
     .title{
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
     .container{
         box-sizing: border-box;
@@ -170,9 +175,15 @@ border: 1px solid red;
     .titles{
         font-size: 2rem;
     }
+    .desc{
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
 
     .description{
         font-size: 2rem;
+        max-width: 500px;
+        
     }
 
     .id{
@@ -208,7 +219,6 @@ border: 1px solid red;
 @media (min-width:768px){
     .container{
         width: 100%;
-        border: 1px solid yellow;
     }
     .image{
         width: 250px;
@@ -220,7 +230,7 @@ border: 1px solid red;
     }
     .btn{
         padding:0.4rem 1rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         height: fit-content;
         bottom: -50px;
         

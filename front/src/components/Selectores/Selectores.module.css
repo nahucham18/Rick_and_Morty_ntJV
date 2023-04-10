@@ -3,3 +3,16 @@
     gap: 1rem;
     margin: 0 auto 1rem;
 }
+
+.selector{
+    background-color: #ddd;
+    color: #111;
+    padding: 0.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}

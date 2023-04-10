@@ -1,9 +1,12 @@
 .container{
+    font-size: 1    rem;
     box-sizing: border-box;
     background-color: #4faa92;
-    padding: 2rem;
+    padding: 2rem 2rem 7rem;
     padding-top: 5rem;
-    height: 90vh;
+    
+    height: fit-content;
+    
     color: #ddd;
 }
 
@@ -20,4 +23,11 @@
 .parrafo{
     max-width: 800px;
     margin: 0 auto;
+}
+
+@media (min-width: 576px){
+    .container{
+        font-size: 1.6rem;
+    }
+
 }

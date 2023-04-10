@@ -73,8 +73,8 @@ const Form = () =>{
                 </div>
 
                 <button className={style.btn_login}>LOGIN</button>
-                <Link to={'/rickandmorty/register'}>
-                    <span>Sing up / Registrate</span>
+                <Link className={style.enlace_register}to={'/rickandmorty/register'}>
+                    <span className={style.register}>Sing up / Registrate</span>
                 </Link>
             
             </form>
